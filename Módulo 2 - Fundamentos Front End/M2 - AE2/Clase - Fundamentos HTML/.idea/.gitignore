@@ -1,0 +1,13 @@
+# Archivos y carpetas del IDE WebStorm (.idea)
+.idea/
+*.iml
+workspace.xml
+modules.xml
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp

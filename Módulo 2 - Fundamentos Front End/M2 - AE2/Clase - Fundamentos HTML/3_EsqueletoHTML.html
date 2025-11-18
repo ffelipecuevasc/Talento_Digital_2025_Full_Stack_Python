@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--
+  Archivo: tema7-estructura-basica-documento.html
+  Proyecto: Manual M2 AE2 - Tema 7
+  Objetivo: Explicar y demostrar la estructura básica de un documento HTML5
+            (DOCTYPE, <html>, <head>, <body>), aplicando el contenido del Tema 7.
+  Nota: Crea este archivo en WebStorm (New > HTML File) dentro de tu proyecto HTML5.
+-->
+<html lang="es">
+<head>
+    <!--
+      Metadatos mínimos recomendados en HTML5:
+      - charset="utf-8": codificación estándar para soportar tildes, ñ y símbolos.
+      - title: nombre del documento, visible en la pestaña del navegador e historial.
+    -->
+    <meta charset="utf-8">
+    <title>Tema 7 - Estructura básica de un documento HTML5</title>
+</head>
+<body>
+<!--
+  SECTION 1:
+  Encabezado principal de la página.
+  Aquí usamos <header> + <h1> para presentar el objetivo del archivo.
+-->
+<header>
+    <h1>Estructura básica de un documento HTML5: el esqueleto de tu página</h1>
+    <p>
+        En esta página vamos a ver, paso a paso, cómo se arma el “esqueleto”
+        de cualquier documento HTML5 moderno: <code>&lt;!DOCTYPE html&gt;</code>,
+        <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>.
+    </p>
+</header>
+
+<!--
+  SECTION 2:
+  Contenido principal de la página.
+  Usamos <main> para englobar el contenido central, siguiendo la estructura semántica.
+-->
+<main>
+    <!--
+      SUBSECCIÓN 2.1 - VISIÓN GENERAL DEL ESQUELETO
+      Presentamos la idea general de cómo se ve un documento HTML5 completo.
+    -->
+    <section>
+        <h2>1. Vista general del esqueleto HTML5</h2>
+
+        <p>
+            Todo documento HTML5 bien formado sigue una estructura básica:
+        </p>
+
+        <!--
+          Usamos <pre><code> para mostrar el código como texto literal,
+          sin que el navegador lo interprete.
+        -->
+        <pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Título de la página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hola mundo&lt;/h1&gt;
+    &lt;p&gt;Esta es mi primera página HTML5 completa.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+      </pre>
+
+        <!--
+          Esta estructura coincide con lo que se explica en el manual:
+          - La primera línea declara el tipo de documento (HTML5).
+          - <html> es el elemento raíz.
+          - <head> contiene metadatos (datos sobre el documento).
+          - <body> contiene todo lo que el usuario ve en pantalla.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.2 - DOCTYPE: ACTIVANDO EL MODO ESTÁNDAR
+      Explicamos el rol de <!DOCTYPE html>.
+    -->
+    <section>
+        <h2>2. La declaración <code>&lt;!DOCTYPE html&gt;</code></h2>
+
+        <p>
+            La primera línea de un documento HTML5 moderno es la declaración:
+        </p>
+
+        <pre>
+<code>&lt;!DOCTYPE html&gt;</code>
+      </pre>
+
+        <p>
+            Su función principal es indicarle al navegador que el documento
+            está escrito siguiendo el estándar HTML5 y que debe renderizarlo
+            en <strong>modo estándar</strong>, evitando comportamientos antiguos
+            o de compatibilidad (“quirks mode”).
+        </p>
+
+        <!--
+          En versiones anteriores de HTML la declaración DOCTYPE era larga y compleja.
+          En HTML5 se simplificó a esta forma corta y fácil de recordar.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.3 - <html>: ELEMENTO RAÍZ Y ATRIBUTO LANG
+      Mostramos cómo <html> envuelve todo y cómo se declara el idioma del documento.
+    -->
+    <section>
+        <h2>3. El elemento raíz <code>&lt;html&gt;</code> y el atributo <code>lang</code></h2>
+
+        <p>
+            Después del DOCTYPE viene el elemento raíz:
+        </p>
+
+        <pre>
+<code>&lt;html lang="es"&gt;
+  ...
+&lt;/html&gt;</code>
+      </pre>
+
+        <p>
+            Aquí ocurren dos cosas importantes:
+        </p>
+
+        <ul>
+            <li>
+                <strong><code>&lt;html&gt; ... &lt;/html&gt;</code></strong> envuelve todo el contenido
+                del documento HTML.
+            </li>
+            <li>
+                El atributo <code>lang="es"</code> indica que el idioma principal del documento es
+                el español. Esto ayuda a lectores de pantalla, buscadores y herramientas de accesibilidad.
+            </li>
+        </ul>
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.4 - <head>: METADATOS Y CONFIGURACIÓN DEL DOCUMENTO
+      Explicamos el rol del <head> y mostramos algunos elementos mínimos.
+    -->
+    <section>
+        <h2>4. La sección <code>&lt;head&gt;</code>: metadatos y configuración</h2>
+
+        <p>
+            El elemento <code>&lt;head&gt;</code> contiene metadatos, es decir, datos
+            sobre el documento que no se muestran directamente como contenido en la página.
+        </p>
+
+        <h3>Ejemplo de <code>&lt;head&gt;</code> mínimo recomendado</h3>
+
+        <pre>
+<code>&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Mi primera página HTML5&lt;/title&gt;
+&lt;/head&gt;</code>
+      </pre>
+
+        <ul>
+            <li>
+                <code>&lt;meta charset="utf-8"&gt;</code> establece la codificación de caracteres.
+                UTF-8 es el estándar moderno recomendado.
+            </li>
+            <li>
+                <code>&lt;title&gt;...&lt;/title&gt;</code> define el título del documento que verás
+                en la pestaña del navegador, en los marcadores y en muchos resultados de búsqueda.
+            </li>
+        </ul>
+
+        <!--
+          Más adelante se agregan otras etiquetas dentro de <head>:
+          - meta viewport para móviles,
+          - link a hojas de estilo CSS,
+          - íconos del sitio (favicon), etc.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.5 - <body>: CONTENIDO VISIBLE PARA EL USUARIO
+      Todo lo que el usuario ve en la página vive dentro del <body>.
+    -->
+    <section>
+        <h2>5. La sección <code>&lt;body&gt;</code>: el contenido visible</h2>
+
+        <p>
+            Todo el contenido que el usuario ve en la página (texto, imágenes,
+            enlaces, listas, formularios, etc.) se coloca dentro del elemento
+            <code>&lt;body&gt;</code>.
+        </p>
+
+        <h3>Ejemplo sencillo de <code>&lt;body&gt;</code></h3>
+
+        <pre>
+<code>&lt;body&gt;
+  &lt;h1&gt;Bienvenido a mi página&lt;/h1&gt;
+  &lt;p&gt;Este es el contenido visible para el usuario.&lt;/p&gt;
+&lt;/body&gt;</code>
+      </pre>
+
+        <p>
+            Dentro del <code>&lt;body&gt;</code> también utilizamos etiquetas semánticas
+            como <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>
+            y <code>&lt;footer&gt;</code> para organizar el contenido, como se vio en otros temas.
+        </p>
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.6 - ELEMENTOS VACÍOS EN HEAD Y BODY
+      Mostramos ejemplos de elementos vacíos (void elements) en ambas secciones.
+    -->
+    <section>
+        <h2>6. Elementos vacíos dentro del esqueleto</h2>
+
+        <p>
+            Algunos elementos HTML no tienen contenido interno y por eso
+            no usan etiqueta de cierre. Son los llamados <strong>elementos vacíos</strong>.
+        </p>
+
+        <h3>Ejemplos en <code>&lt;head&gt;</code></h3>
+        <pre>
+<code>&lt;meta charset="utf-8"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+      </pre>
+
+        <h3>Ejemplos en <code>&lt;body&gt;</code></h3>
+        <pre>
+<code>&lt;img src="img/logo.png" alt="Logotipo del sitio"&gt;
+&lt;br&gt;
+&lt;hr&gt;</code>
+      </pre>
+
+        <!--
+          Regla importante:
+          - No se escribe </meta>, </link>, </img>, </br> ni </hr> en HTML5.
+          - Basta con la etiqueta de apertura correctamente formada.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.7 - CONSTRUYENDO EL DOCUMENTO PASO A PASO
+      Simulamos cómo irías armando un "index.html" desde cero en WebStorm.
+    -->
+    <section>
+        <h2>7. Construyendo tu <code>index.html</code> paso a paso</h2>
+
+        <p>
+            Imagina que estás en WebStorm y creas un nuevo archivo llamado
+            <code>index.html</code>. Sigamos la construcción del documento:
+        </p>
+
+        <h3>Paso 1: agregar el DOCTYPE</h3>
+        <pre>
+<code>&lt;!DOCTYPE html&gt;</code>
+      </pre>
+
+        <h3>Paso 2: agregar el elemento <code>&lt;html&gt;</code> con el idioma</h3>
+        <pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+
+&lt;/html&gt;</code>
+      </pre>
+
+        <h3>Paso 3: agregar <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code></h3>
+        <pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+      </pre>
+
+        <h3>Paso 4: completar el <code>&lt;head&gt;</code> mínimo</h3>
+        <pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Mi primera página HTML5&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+      </pre>
+
+        <h3>Paso 5: agregar contenido básico al <code>&lt;body&gt;</code></h3>
+        <pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Mi primera página HTML5&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hola mundo&lt;/h1&gt;
+    &lt;p&gt;Esta es mi primera página HTML5 completa.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+      </pre>
+
+        <!--
+          Con esto tienes un documento HTML5 válido y completo que puedes abrir
+          en el navegador directamente desde WebStorm o el explorador de archivos.
+        -->
+    </section>
+</main>
+
+<!--
+  SECTION 3:
+  Pie de página sencillo para cerrar el documento.
+-->
+<footer>
+    <p>
+        Tema 7 - Estructura básica de un documento HTML5 | Proyecto HTML5 - M2 AE2
+    </p>
+</footer>
+</body>
+</html>

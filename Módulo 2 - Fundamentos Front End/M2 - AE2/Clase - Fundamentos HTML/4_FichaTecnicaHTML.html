@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--
+  Archivo: tema8-metadatos-titulo-codificacion-comentarios.html
+  Proyecto: Manual M2 AE2 - Tema 8
+  Objetivo: Explicar y demostrar el uso de metadatos, título, codificación (charset)
+            y comentarios en HTML5, aplicando el contenido del Tema 8 del manual.
+  Nota: Crea este archivo en WebStorm (New > HTML File) dentro de tu proyecto HTML5.
+-->
+<html lang="es">
+<head>
+    <!--
+      METADATOS MÍNIMOS RECOMENDADOS EN HTML5
+      - charset="utf-8": codificación estándar para mostrar correctamente tildes, ñ y símbolos.
+      - title: título del documento, visible en la pestaña del navegador, historial, favoritos y
+               utilizado muchas veces por los buscadores en los resultados.
+    -->
+    <meta charset="utf-8">
+    <title>Tema 8 - Metadatos, título, codificación y comentarios</title>
+
+    <!--
+      META DESCRIPTION:
+      Resumen breve del contenido de la página. Algunos motores de búsqueda lo usan
+      como texto descriptivo en los resultados.
+    -->
+    <meta name="description"
+          content="Ejemplos prácticos de metadatos, título, codificación UTF-8 y comentarios en HTML5, según el Tema 8 del Manual M2 AE2.">
+
+    <!--
+      META AUTHOR:
+      Indica el autor del documento (persona, equipo o institución).
+    -->
+    <meta name="author" content="Estudiante Bootcamp Full Stack Python">
+
+    <!--
+      META VIEWPORT:
+      Muy importante para dispositivos móviles. Ajusta el ancho lógico de la página
+      al ancho del dispositivo y fija el nivel de zoom inicial.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+      EJEMPLO DE LINK A HOJA DE ESTILOS (aunque no definamos styles.css ahora):
+      Este es otro tipo de metadato, usando <link> para conectar recursos externos.
+      - rel="stylesheet": indica que el recurso es una hoja de estilos CSS.
+      - href="styles.css": ruta al archivo de estilos (puedes crearlo luego si quieres probarlo).
+    -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--
+      EJEMPLO DE FAVICON (ICONO DE LA PESTAÑA):
+      - rel="icon": indica ícono del sitio.
+      - href="favicon.ico": ruta al ícono (puedes reemplazarla por un archivo real más adelante).
+    -->
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<!--
+  SECTION 1:
+  Encabezado principal de la página.
+  <header> + <h1> presentan el tema "ficha técnica" de la página.
+-->
+<header>
+    <h1>Metadatos, título, codificación y comentarios: la “ficha técnica” de tu página</h1>
+    <p>
+        En esta página veremos cómo los metadatos, el título, la codificación UTF-8
+        y los comentarios convierten tu HTML en algo más profesional, entendible
+        para navegadores, buscadores y otros desarrolladores.
+    </p>
+</header>
+
+<!--
+  SECTION 2:
+  Contenido principal del documento.
+  Usamos <main> para indicar el bloque principal del contenido, según HTML5.
+-->
+<main>
+    <!--
+      SUBSECCIÓN 2.1 - ¿QUÉ SON LOS METADATOS Y DÓNDE VIVEN?
+      Explicamos el concepto de metadatos y su relación con <head>.
+    -->
+    <section>
+        <h2>1. ¿Qué son los metadatos en HTML?</h2>
+
+        <p>
+            Los metadatos son <strong>datos sobre el documento</strong>, no el contenido
+            que el usuario ve directamente en la página. Informan a navegadores, buscadores,
+            redes sociales y herramientas de análisis sobre cosas como:
+        </p>
+
+        <ul>
+            <li>Codificación de caracteres (por ejemplo, UTF-8).</li>
+            <li>Autor y descripción del documento.</li>
+            <li>Configuración para móviles (viewport).</li>
+            <li>Recursos externos como CSS o íconos.</li>
+        </ul>
+
+        <p>
+            Todos estos metadatos viven dentro del elemento <code>&lt;head&gt;</code>, que forma
+            parte del “esqueleto” básico de la página HTML5.
+        </p>
+
+        <!--
+          Recordatorio:
+          <head> no muestra contenido directamente al usuario, pero es vital para
+          el funcionamiento, posicionamiento y presentación de la página.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.2 - EL ELEMENTO <title>: NOMBRE OFICIAL DEL DOCUMENTO
+      Mostramos el rol del <title> y lo diferenciamos de <h1>.
+    -->
+    <section>
+        <h2>2. El elemento <code>&lt;title&gt;</code>: el nombre oficial de tu página</h2>
+
+        <p>
+            El elemento <code>&lt;title&gt;</code> define el <strong>título del documento</strong>,
+            que se muestra en:
+        </p>
+
+        <ul>
+            <li>La pestaña del navegador.</li>
+            <li>El historial de navegación.</li>
+            <li>Los marcadores o favoritos.</li>
+            <li>Muchos resultados de búsqueda (como título del enlace).</li>
+        </ul>
+
+        <p>
+            Ejemplo dentro de <code>&lt;head&gt;</code>:
+        </p>
+
+        <pre>
+<code>&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Portafolio de Ana - Desarrolladora Web&lt;/title&gt;
+&lt;/head&gt;</code>
+      </pre>
+
+        <p>
+            Importante:
+        </p>
+
+        <ul>
+            <li>Debe haber <strong>solo un</strong> <code>&lt;title&gt;</code> por documento.</li>
+            <li>El <code>&lt;title&gt;</code> no es lo mismo que el <code>&lt;h1&gt;</code> (título visible en el cuerpo).</li>
+        </ul>
+
+        <!--
+          <title> identifica el documento fuera del contexto de la página (pestañas, búsquedas).
+          <h1> es el título principal que ve el usuario dentro del contenido (<body>).
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.3 - CODIFICACIÓN UTF-8: QUE LAS TILDES NO MUERAN :)
+      Explicamos <meta charset="utf-8"> y su importancia.
+    -->
+    <section>
+        <h2>3. Codificación de caracteres: <code>&lt;meta charset="utf-8"&gt;</code></h2>
+
+        <p>
+            La codificación de caracteres define cómo se convierten letras, símbolos
+            y emojis en números que la computadora entiende. En la web moderna,
+            la recomendación (y práctica estándar) es <strong>UTF-8</strong>.
+        </p>
+
+        <p>En HTML5 se declara así dentro de <code>&lt;head&gt;</code>:</p>
+
+        <pre>
+<code>&lt;meta charset="utf-8"&gt;</code>
+      </pre>
+
+        <p>
+            ¿Por qué es tan importante?
+        </p>
+
+        <ul>
+            <li>Permite mostrar correctamente tildes, eñes y caracteres especiales.</li>
+            <li>Evita símbolos raros como <code>Ã±</code> o <code>Ã³</code>.</li>
+            <li>Es la codificación más usada en la web actual.</li>
+        </ul>
+
+        <!--
+          Buenas prácticas:
+          - Colocar <meta charset="utf-8"> al comienzo del <head>.
+          - Asegurarte de que tu editor (WebStorm) también guarde los archivos en UTF-8.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.4 - OTROS METADATOS ÚTILES: DESCRIPTION, AUTHOR, VIEWPORT
+      Mostramos ejemplos de metadatos adicionales comunes.
+    -->
+    <section>
+        <h2>4. Otros metadatos clave: descripción, autor y viewport</h2>
+
+        <p>
+            Además del charset y el título, es muy común ver otras metaetiquetas
+            que enriquecen la “ficha técnica” de tu página.
+        </p>
+
+        <h3>4.1. Descripción de la página</h3>
+        <pre>
+<code>&lt;meta name="description"
+      content="Portafolio de Ana, desarrolladora web junior enfocada en HTML, CSS y Python."&gt;</code>
+      </pre>
+
+        <p>
+            Esta descripción puede aparecer en los resultados de búsqueda como resumen
+            de tu página. Debe ser clara, breve y atractiva.
+        </p>
+
+        <h3>4.2. Autor del documento</h3>
+        <pre>
+<code>&lt;meta name="author" content="Ana Desarrolladora"&gt;</code>
+      </pre>
+
+        <p>
+            Indica la persona o entidad responsable del contenido del documento.
+        </p>
+
+        <h3>4.3. Viewport (móviles)</h3>
+        <pre>
+<code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+      </pre>
+
+        <p>
+            Esto le indica al navegador móvil que el ancho del “lienzo” debe coincidir
+            con el ancho del dispositivo, y define el nivel de zoom inicial. Es clave
+            para diseños responsive.
+        </p>
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.5 - COMENTARIOS EN HTML: NOTAS PARA HUMANOS
+      Explicamos el uso de comentarios y mostramos ejemplos.
+    -->
+    <section>
+        <h2>5. Comentarios en HTML: <code>&lt;!-- ... --&gt;</code></h2>
+
+        <p>
+            Los comentarios sirven para dejar notas en el código que el navegador
+            ignora por completo. Son útiles para explicar secciones, dejar recordatorios
+            o desactivar temporalmente algún bloque.
+        </p>
+
+        <p>La sintaxis es:</p>
+
+        <pre>
+<code>&lt;!-- Este es un comentario en HTML --&gt;</code>
+      </pre>
+
+        <h3>Ejemplo práctico en una sección</h3>
+        <pre>
+<code>&lt;!-- Sección principal de noticias --&gt;
+&lt;section id="noticias"&gt;
+  &lt;h2&gt;Noticias recientes&lt;/h2&gt;
+
+  &lt;!-- Artículo destacado --&gt;
+  &lt;article&gt;
+    &lt;h3&gt;Comienza el bootcamp de desarrollo web&lt;/h3&gt;
+    &lt;p&gt;Detalles sobre el inicio del bootcamp...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</code>
+      </pre>
+
+        <p>
+            Buenas prácticas con comentarios:
+        </p>
+
+        <ul>
+            <li>Úsalos para explicar bloques, no cada línea.</li>
+            <li>No pongas información sensible (contraseñas, datos privados).</li>
+            <li>Actualízalos o elimínalos si cambias el código, para evitar confusiones.</li>
+        </ul>
+
+        <h3>Desactivar temporalmente una sección con comentarios</h3>
+
+        <pre>
+<code>&lt;!--
+&lt;section&gt;
+  &lt;h2&gt;Sección en mantenimiento&lt;/h2&gt;
+  &lt;p&gt;Este contenido se mostrará más adelante.&lt;/p&gt;
+&lt;/section&gt;
+--&gt;</code>
+      </pre>
+
+        <p>
+            El navegador ignorará todo lo que está dentro del comentario,
+            como si no existiera en el documento.
+        </p>
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.6 - INDEX.HTML: EL "PORTERO" DEL SITIO
+      Explicamos brevemente el rol de index.html en muchos servidores web.
+    -->
+    <section>
+        <h2>6. <code>index.html</code>: la puerta de entrada por defecto</h2>
+
+        <p>
+            En muchos servidores web, cuando alguien visita un dominio o carpeta sin
+            especificar un archivo (por ejemplo, <code>https://misitio.com/</code>),
+            el servidor busca automáticamente un archivo de entrada, y el nombre más
+            común es <strong><code>index.html</code></strong>.
+        </p>
+
+        <p>
+            Eso significa que si tienes un proyecto con esta estructura:
+        </p>
+
+        <pre>
+<code>mi-sitio/
+  index.html
+  contacto.html
+  img/
+  css/</code>
+      </pre>
+
+        <p>
+            Lo más probable es que <code>index.html</code> se cargue al entrar a
+            <code>https://misitio.com/</code> sin que el usuario tenga que escribirlo.
+            Por eso, solemos considerar a <code>index.html</code> como la “home”
+            o página principal de un sitio.
+        </p>
+    </section>
+</main>
+
+<!--
+  SECTION 3:
+  Pie de página del documento. No es el foco del tema, pero lo incluimos
+  para cerrar la estructura de la página de forma completa.
+-->
+<footer>
+    <p>
+        Tema 8 - Metadatos, título, codificación y comentarios | Proyecto HTML5 - M2 AE2
+    </p>
+</footer>
+</body>
+</html>

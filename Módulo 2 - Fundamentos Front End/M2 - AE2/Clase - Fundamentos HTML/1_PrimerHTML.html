@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+  Archivo: tema5-exploracion-etiquetas-atributos.html
+  Proyecto: Manual M2 AE2 - Tema 5
+  Objetivo: Explorar de forma práctica etiquetas y atributos básicos de HTML5,
+            aplicando lo visto en el Tema 5 del "Manual M2 AE2.pdf".
+  Nota: Puedes crear este archivo en WebStorm (New > HTML File) dentro de tu proyecto.
+-->
+<html lang="es">
+<head>
+    <!-- Metadatos mínimos recomendados en HTML5 -->
+    <meta charset="utf-8">
+    <title>Tema 5 - Exploración práctica de etiquetas y atributos</title>
+</head>
+<body>
+<!--
+  SECTION 1:
+  Encabezado principal de la página.
+  Aquí usamos <header> + <h1> tal como se sugiere en el manual: un solo <h1> principal.
+-->
+<header>
+    <h1>Exploración práctica de etiquetas y atributos en HTML5</h1>
+    <p>
+        <!--
+          <p> crea un párrafo de texto. El navegador agrega espacio antes y después.
+          Usamos este párrafo como introducción breve al contenido de la página.
+        -->
+        En esta página pondremos en práctica etiquetas y atributos básicos de HTML5:
+        encabezados, párrafos, listas, énfasis, enlaces e imágenes.
+    </p>
+</header>
+
+<!--
+  SECTION 2:
+  Contenido principal de la página.
+  Usamos <main> para indicar el contenido principal, siguiendo la estructura semántica.
+-->
+<main>
+    <!--
+      SUBSECCIÓN 2.1 - ENCABEZADOS H1-H6
+      Demostramos la jerarquía de títulos desde <h1> (más importante) hasta <h6>.
+      En la práctica, suele usarse solo un <h1> por documento y el resto como subtítulos.
+    -->
+    <section>
+        <h2>1. Encabezados de <code>h1</code> a <code>h6</code></h2>
+
+        <!--
+          NOTA: ya usamos un <h1> en el <header>, por eso aquí empezamos desde <h2>.
+          En un sitio real, <h2> representa secciones importantes dentro del contenido.
+        -->
+        <h2>Este es un ejemplo de H2</h2>
+        <h3>Este es un ejemplo de H3</h3>
+        <h4>Este es un ejemplo de H4</h4>
+        <h5>Este es un ejemplo de H5</h5>
+        <h6>Este es un ejemplo de H6</h6>
+
+        <!--
+          Observa en el navegador que cada nivel tiene un tamaño distinto por defecto.
+          Lo importante no es el tamaño visual, sino la jerarquía del contenido.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.2 - PÁRRAFOS Y ÉNFASIS
+      Usamos <p> para párrafos y <strong>/<em> para destacar partes del texto.
+      <strong> indica importancia; <em> indica énfasis (como subir el tono de voz).
+    -->
+    <section>
+        <h2>2. Párrafos y énfasis de texto</h2>
+
+        <p>
+            Este es un párrafo de ejemplo. HTML se encarga de separar los párrafos
+            entre sí, así que no necesitamos poner saltos de línea manualmente para eso.
+        </p>
+
+        <p>
+            Podemos resaltar una parte del texto usando
+            <strong>el elemento &lt;strong&gt; para indicar importancia</strong>
+            y también podemos usar
+            <em>el elemento &lt;em&gt; para marcar énfasis</em>.
+        </p>
+
+        <!--
+          En lectores de pantalla, <strong> y <em> no son solo "negrita" o "cursiva":
+          también comunican importancia y énfasis, ayudando a la accesibilidad.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.3 - LISTAS UL/OL + LI
+      Mostramos una lista desordenada (<ul>) y una lista ordenada (<ol>),
+      ambas usando <li> para cada elemento de la lista.
+    -->
+    <section>
+        <h2>3. Listas desordenadas y ordenadas</h2>
+
+        <!-- Lista desordenada: el orden NO importa (viñetas) -->
+        <h3>Lista desordenada (<code>&lt;ul&gt;</code>)</h3>
+        <p>Lenguajes que me gustaría aprender en este bootcamp:</p>
+        <ul>
+            <!--
+              Cada <li> representa un “ítem” de la lista.
+              <ul> indica que es una lista sin un orden específico (viñetas).
+            -->
+            <li>HTML y CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+
+        <!-- Lista ordenada: el orden SÍ importa (números) -->
+        <h3>Lista ordenada (<code>&lt;ol&gt;</code>)</h3>
+        <p>Pasos para crear y probar tu primera página HTML en WebStorm:</p>
+        <ol>
+            <li>Crear un nuevo proyecto HTML en WebStorm.</li>
+            <li>Crear un archivo llamado <code>index.html</code>.</li>
+            <li>Escribir la estructura básica de HTML5.</li>
+            <li>Abrir el archivo en el navegador para ver el resultado.</li>
+        </ol>
+
+        <!--
+          Usa listas para agrupar información relacionada y evitar "muros de texto".
+          <ul> para ítems sin orden específico; <ol> cuando el orden es importante.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.4 - ENLACES CON ATRIBUTOS HREF, TARGET Y TITLE
+      <a> crea un enlace. Utilizamos:
+      - href: URL de destino.
+      - target="_blank": abrir en una nueva pestaña.
+      - title: texto que aparece como tooltip (información adicional).
+    -->
+    <section>
+        <h2>4. Enlaces con atributos <code>href</code>, <code>target</code> y <code>title</code></h2>
+
+        <p>
+            Este es un enlace simple a una página externa (se abre en la misma pestaña):
+        </p>
+        <p>
+            <a href="https://www.mozilla.org/es-ES/docs/Web/HTML">
+                Documentación de HTML en MDN (se abre en la misma pestaña)
+            </a>
+        </p>
+
+        <p>
+            Este es un enlace que se abre en otra pestaña y muestra un tooltip al pasar el mouse:
+        </p>
+        <p>
+            <a href="https://developer.mozilla.org/es/docs/Learn/HTML"
+               target="_blank"
+               title="Abrir la guía de aprendizaje de HTML en MDN en una nueva pestaña">
+                Aprender HTML paso a paso (MDN)
+            </a>
+        </p>
+
+        <!--
+          Explicación rápida:
+          - href: indica la dirección (URL) a la que lleva el enlace.
+          - target="_blank": abre el enlace en otra pestaña/ventana.
+          - title: texto breve informativo que aparece como tooltip. Úsalo como extra, no como única fuente de información.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.5 - IMÁGENES CON SRC, ALT Y TITLE
+      <img> es un elemento "vacío" (void): no tiene cierre </img>.
+      Debe usar, como mínimo, src y alt.
+    -->
+    <section>
+        <h2>5. Imágenes con atributos <code>src</code>, <code>alt</code> y <code>title</code></h2>
+
+        <!--
+          Para que este ejemplo funcione, crea una carpeta llamada "img"
+          en tu proyecto y coloca dentro una imagen (por ejemplo "foto-perfil-ejemplo.jpg").
+          Luego ajusta el nombre del archivo en el atributo src si es necesario.
+        -->
+        <p>Ejemplo de imagen con <code>src</code>, <code>alt</code> y <code>title</code>:</p>
+
+        <img
+                src="img/foto-perfil-ejemplo.jpg"
+                alt="Foto de perfil de una persona sonriendo frente al computador"
+                title="Ejemplo de imagen con texto alternativo y título"
+        >
+
+        <!--
+          Explicación:
+          - src: ruta al archivo de imagen (relativa o absoluta).
+          - alt: texto alternativo que describe la imagen. Es crucial para accesibilidad
+                 (lectores de pantalla) y se muestra si la imagen no carga.
+          - title: texto extra que aparece como tooltip al pasar el mouse sobre la imagen.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.6 - ATRIBUTO STYLE (ESTILOS EN LÍNEA)
+      El manual explica que se puede usar style para pruebas rápidas,
+      aunque lo profesional es usar CSS externo. Aquí hacemos un ejemplo sencillo.
+    -->
+    <section>
+        <h2>6. Ejemplo rápido con el atributo <code>style</code></h2>
+
+        <!--
+          Atributo style:
+          - Permite aplicar reglas CSS directamente sobre un elemento.
+          - Úsalo solo para ejemplos rápidos o pruebas; en proyectos reales, usa archivos CSS separados.
+        -->
+        <p style="color: darkblue; font-size: 1.2rem;">
+            Este párrafo tiene un color azul oscuro y un tamaño de fuente ligeramente mayor,
+            gracias al atributo <code>style</code>.
+        </p>
+
+        <p style="background-color: #f0f0f0; padding: 10px;">
+            También podemos aplicar un color de fondo y relleno (padding) usando
+            CSS en línea. Más adelante trabajaremos estos estilos desde archivos CSS externos.
+        </p>
+    </section>
+</main>
+
+<!--
+  SECTION 3:
+  Pie de página simple.
+  No es el foco del Tema 5, pero lo incluimos para cerrar la página de forma completa.
+-->
+<footer>
+    <p>
+        <!--
+          Este texto de pie de página sirve solo como cierre del ejemplo.
+          En un proyecto real podrías incluir enlaces de contacto, redes sociales, etc.
+        -->
+        Tema 5 - Exploración práctica de etiquetas y atributos | Proyecto HTML5 - M2 AE2
+    </p>
+</footer>
+</body>
+</html>

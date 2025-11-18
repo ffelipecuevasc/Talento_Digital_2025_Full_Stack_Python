@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--
+  Archivo: tema10-encabezados-parrafos-listas.html
+  Proyecto: Manual M2 AE2 - Tema 10
+  Objetivo: Explicar y demostrar el uso de encabezados, párrafos y listas en HTML5
+            para convertir ideas en contenido claro, aplicando el contenido del Tema 10.
+  Nota: Crea este archivo en WebStorm (New > HTML File) dentro de tu proyecto HTML5.
+-->
+<html lang="es">
+<head>
+    <!--
+      METADATOS BÁSICOS
+      - charset="utf-8": codificación estándar para caracteres en español.
+      - title: nombre del documento en la pestaña del navegador, historial, etc.
+    -->
+    <meta charset="utf-8">
+    <title>Tema 10 - Encabezados, párrafos y listas en HTML5</title>
+</head>
+<body>
+<!--
+  SECTION 1:
+  ENCABEZADO PRINCIPAL DE LA PÁGINA
+  Usamos <header> + <h1> para presentar el tema principal del documento.
+-->
+<header>
+    <h1>Encabezados, párrafos y listas: cómo convertir ideas en contenido claro</h1>
+    <p>
+        En esta página veremos cómo usar <strong>encabezados</strong>, <strong>párrafos</strong>
+        y <strong>listas</strong> en HTML5 para organizar tus ideas de forma clara, legible
+        y profesional, tal como se trabaja en el Tema 10 del manual.
+    </p>
+</header>
+
+<!--
+  SECTION 2:
+  CONTENIDO PRINCIPAL
+  Usamos <main> para agrupar el contenido central de la página.
+-->
+<main>
+    <!--
+      SUBSECCIÓN 2.1 - VISIÓN GENERAL
+      Explicamos brevemente el rol de cada tipo de elemento.
+    -->
+    <section>
+        <h2>1. ¿Por qué son tan importantes encabezados, párrafos y listas?</h2>
+
+        <p>
+            Los encabezados, párrafos y listas son la base de casi cualquier página de contenido:
+        </p>
+
+        <ul>
+            <li>
+                Los <strong>encabezados</strong> (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>)
+                crean una jerarquía de títulos y subtítulos.
+            </li>
+            <li>
+                Los <strong>párrafos</strong> (<code>&lt;p&gt;</code>) agrupan ideas en bloques de texto.
+            </li>
+            <li>
+                Las <strong>listas</strong> (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>)
+                organizan elementos en viñetas o pasos.
+            </li>
+        </ul>
+
+        <p>
+            Usados correctamente, permiten que las personas y las máquinas
+            (buscadores, lectores de pantalla) entiendan tu contenido con facilidad.
+        </p>
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.2 - ENCADENAMIENTO DE ENCABEZADOS H1–H6
+      Demostramos la jerarquía de encabezados. En un documento real se recomienda
+      un solo <h1> y luego <h2>, <h3>, etc., según la estructura lógica del contenido.
+    -->
+    <section>
+        <h2>2. Encabezados de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></h2>
+
+        <p>
+            HTML define seis niveles de encabezado. Ya usamos <code>&lt;h1&gt;</code>
+            en el <code>&lt;header&gt;</code>, así que aquí mostramos desde <code>&lt;h2&gt;</code>.
+        </p>
+
+        <h2>Ejemplo de H2 – Sección principal</h2>
+        <h3>Ejemplo de H3 – Subsección dentro de la sección</h3>
+        <h4>Ejemplo de H4 – Detalle más específico</h4>
+        <h5>Ejemplo de H5 – Aún más detalle</h5>
+        <h6>Ejemplo de H6 – Nivel mínimo de encabezado</h6>
+
+        <!--
+          Observaciones importantes:
+          - <h1> debe ser el título principal de la página y se recomienda usar solo uno.
+          - <h2> a <h6> se usan como subtítulos, respetando una jerarquía lógica.
+          - No elijas el nivel de encabezado solo por el tamaño visual; el nivel refleja estructura.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.3 - USO CORRECTO DE PÁRRAFOS
+      Cómo usar <p> para agrupar ideas en bloques de texto legibles.
+    -->
+    <section>
+        <h2>3. Párrafos: el bloque básico de texto</h2>
+
+        <p>
+            Un párrafo en HTML se representa con <code>&lt;p&gt;</code>. Cada párrafo
+            debería contener una idea principal. Cuando cambias de idea, creas otro párrafo.
+        </p>
+
+        <h3>Ejemplo de párrafos bien separados</h3>
+
+        <p>
+            Empecé en el mundo de la programación sin experiencia previa, solo con curiosidad
+            y muchas ganas de aprender.
+        </p>
+
+        <p>
+            Descubrí que HTML era un excelente punto de partida porque me permitía ver
+            resultados de inmediato en el navegador, lo que hacía el aprendizaje motivador.
+        </p>
+
+        <!--
+          El navegador agrega espacio vertical entre párrafos automáticamente.
+          No es necesario usar <br> para separar ideas; usa nuevos <p>.
+        -->
+
+        <h3>Evita “muros de texto”</h3>
+
+        <p>
+            En lugar de escribir un único párrafo gigantesco con muchas ideas mezcladas,
+            es mejor dividir el contenido en varios <code>&lt;p&gt;</code> más cortos.
+            Esto mejora la legibilidad, especialmente en pantallas pequeñas.
+        </p>
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.4 - LISTAS DESORDENADAS (UL) Y ORDENADAS (OL)
+      Mostramos los dos tipos de listas más usados y cómo combinarlos con <li>.
+    -->
+    <section>
+        <h2>4. Listas: ordenando ideas y pasos</h2>
+
+        <p>
+            Las listas te permiten presentar información de forma estructurada y fácil
+            de escanear visualmente.
+        </p>
+
+        <!-- Lista desordenada: el orden NO importa -->
+        <h3>4.1. Lista desordenada (<code>&lt;ul&gt;</code>)</h3>
+
+        <p>Lenguajes que me interesa aprender en este bootcamp:</p>
+
+        <ul>
+            <li>HTML y CSS para la parte visual.</li>
+            <li>JavaScript para agregar interactividad.</li>
+            <li>Python para el backend y automatización.</li>
+        </ul>
+
+        <!-- Lista ordenada: el orden SÍ importa -->
+        <h3>4.2. Lista ordenada (<code>&lt;ol&gt;</code>)</h3>
+
+        <p>Pasos para crear y probar una página HTML básica:</p>
+
+        <ol>
+            <li>Crear una carpeta para tu proyecto (por ejemplo, <code>mi-sitio/</code>).</li>
+            <li>Dentro de la carpeta, crear un archivo <code>index.html</code>.</li>
+            <li>Escribir la estructura básica de HTML5 en el archivo.</li>
+            <li>Abrir <code>index.html</code> en el navegador para ver el resultado.</li>
+        </ol>
+
+        <!--
+          Reglas clave:
+          - <ul>: lista donde el orden no es relevante (viñetas).
+          - <ol>: lista donde el orden sí es importante (pasos, rankings).
+          - <li>: representa cada ítem de la lista en ambos casos.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.5 - LISTA DE DESCRIPCIÓN (OPCIONAL)
+      Introducimos brevemente <dl>, <dt> y <dd> como un tercer tipo de lista.
+    -->
+    <section>
+        <h2>5. Listas de descripción (<code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code>)</h2>
+
+        <p>
+            Además de las listas desordenadas y ordenadas, HTML ofrece las listas
+            de descripción para pares “término – definición”.
+        </p>
+
+        <p>Ejemplo sencillo:</p>
+
+        <dl>
+            <!--
+              <dt> (definition term): el término a describir.
+              <dd> (definition description): la descripción del término.
+            -->
+            <dt>HTML</dt>
+            <dd>Lenguaje de marcado que define la estructura del contenido de la web.</dd>
+
+            <dt>CSS</dt>
+            <dd>Lenguaje de estilos que controla la apariencia visual de la página.</dd>
+
+            <dt>JavaScript</dt>
+            <dd>Lenguaje de programación que agrega comportamiento e interactividad.</dd>
+        </dl>
+
+        <p>
+            Este tipo de lista es útil para glosarios, FAQs, términos y definiciones
+            dentro de documentación técnica.
+        </p>
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.6 - COMBINANDO ENCABEZADOS, PÁRRAFOS Y LISTAS EN UNA SECCIÓN
+      Creamos una sección realista que utiliza todos estos elementos.
+    -->
+    <section>
+        <h2>6. Ejemplo práctico: sección “Habilidades que desarrollaré”</h2>
+
+        <p>
+            A continuación, combinamos encabezados, párrafos y listas en una sección
+            típica de una página de presentación o portafolio.
+        </p>
+
+        <section>
+            <h3>Habilidades que desarrollaré en este bootcamp</h3>
+
+            <p>
+                Durante el bootcamp, avanzaré desde cero hasta ser capaz de crear
+                aplicaciones web completas, trabajando tanto en el frontend como
+                en el backend.
+            </p>
+
+            <h4>Habilidades técnicas</h4>
+            <ul>
+                <li>Construir páginas web estructuradas con HTML5 semántico.</li>
+                <li>Aplicar estilos y diseños responsivos con CSS.</li>
+                <li>Agregar interactividad usando JavaScript.</li>
+                <li>Programar lógica de negocio usando Python.</li>
+            </ul>
+
+            <h4>Habilidades blandas</h4>
+            <ul>
+                <li>Trabajo en equipo en proyectos de desarrollo.</li>
+                <li>Comunicación efectiva en entornos técnicos.</li>
+                <li>Gestión del tiempo y autocontrol del avance.</li>
+            </ul>
+        </section>
+
+        <!--
+          Observa cómo:
+          - <h3> presenta el tema principal de esta sección.
+          - <p> explica la idea general.
+          - <h4> divide en subcategorías (técnicas / blandas).
+          - Listas <ul> presentan las habilidades puntuales.
+          Esta estructura hace el contenido muy fácil de escanear.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.7 - BUENAS PRÁCTICAS CON ESTOS ELEMENTOS
+      Resumimos las recomendaciones vistas en el manual.
+    -->
+    <section>
+        <h2>7. Buenas prácticas con encabezados, párrafos y listas</h2>
+
+        <ul>
+            <li>Usar un solo <code>&lt;h1&gt;</code> por página como título principal.</li>
+            <li>Respetar la jerarquía lógica de <code>&lt;h2&gt;</code> a <code>&lt;h6&gt;</code>.</li>
+            <li>Evitar usar encabezados solo “por tamaño” (el nivel representa estructura, no diseño).</li>
+            <li>Dividir el texto en varios <code>&lt;p&gt;</code> cortos en vez de un párrafo enorme.</li>
+            <li>Usar listas siempre que haya varios elementos relacionados o pasos numerados.</li>
+            <li>No colocar encabezados directamente dentro de listas (no poner <code>&lt;h2&gt;</code> como hijo directo de <code>&lt;ul&gt;</code>).</li>
+        </ul>
+    </section>
+</main>
+
+<!--
+  SECTION 3:
+  PIE DE PÁGINA
+  <footer> global para información de cierre del documento.
+-->
+<footer>
+    <p>
+        Tema 10 - Encabezados, párrafos y listas | Proyecto HTML5 - M2 AE2
+    </p>
+</footer>
+</body>
+</html>

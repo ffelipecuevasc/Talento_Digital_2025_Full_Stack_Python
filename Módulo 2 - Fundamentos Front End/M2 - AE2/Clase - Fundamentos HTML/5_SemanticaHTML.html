@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--
+  Archivo: tema9-estructura-semantica-global.html
+  Proyecto: Manual M2 AE2 - Tema 9
+  Objetivo: Explicar y demostrar la estructura semántica global de una página HTML5:
+            <header>, <nav>, <main>, <section>, <article>, <aside> y <footer>,
+            aplicando el contenido del Tema 9 del Manual M2 AE2.
+  Nota: Crea este archivo en WebStorm (New > HTML File) dentro de tu proyecto HTML5.
+-->
+<html lang="es">
+<head>
+  <!--
+    METADATOS MÍNIMOS
+    - charset="utf-8": codificación estándar.
+    - title: nombre del documento para pestañas, historial, etc.
+  -->
+  <meta charset="utf-8">
+  <title>Tema 9 - Estructura semántica global en HTML5</title>
+</head>
+<body>
+<!--
+  SECTION 1:
+  CABECERA GLOBAL DE LA PÁGINA
+  <header> representa la cabecera de todo el sitio:
+  normalmente logo, título y, muchas veces, navegación principal.
+-->
+<header>
+  <h1>Estructura semántica global: darle sentido a tu página (HTML5)</h1>
+
+  <!--
+    NAV GLOBAL
+    <nav> contiene bloques importantes de enlaces de navegación.
+    Aquí ponemos el menú principal del sitio.
+  -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#noticias">Noticias</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <p>
+    Esta página está diseñada para mostrar cómo usar las etiquetas semánticas
+    de HTML5 para organizar tu contenido en bloques claros y con significado.
+  </p>
+</header>
+
+<!--
+  SECTION 2:
+  CONTENIDO PRINCIPAL DE LA PÁGINA
+  <main> representa el contenido principal del documento.
+  Debe haber solo un <main> por página.
+-->
+<main>
+  <!--
+    SUBSECCIÓN 2.1 - EXPLICACIÓN GENERAL
+    Aquí damos una pequeña introducción sobre la estructura semántica
+    usando <section>.
+  -->
+  <section>
+    <h2>1. ¿Qué es la estructura semántica global?</h2>
+
+    <p>
+      La estructura semántica global es la forma de dividir tu página web
+      en zonas con significado: cabecera, navegación, contenido principal,
+      secciones de artículos, barra lateral y pie de página.
+    </p>
+
+    <p>
+      Para eso, HTML5 nos da etiquetas como:
+    </p>
+
+    <ul>
+      <li><code>&lt;header&gt;</code> – cabecera (del sitio o de una sección).</li>
+      <li><code>&lt;nav&gt;</code> – navegación principal o importante.</li>
+      <li><code>&lt;main&gt;</code> – contenido principal del documento.</li>
+      <li><code>&lt;section&gt;</code> – sección temática de contenido.</li>
+      <li><code>&lt;article&gt;</code> – contenido independiente (artículo, post, noticia).</li>
+      <li><code>&lt;aside&gt;</code> – contenido complementario o lateral.</li>
+      <li><code>&lt;footer&gt;</code> – pie de página (del sitio o de una sección).</li>
+    </ul>
+
+    <!--
+      Usar estas etiquetas ayuda a:
+      - Accesibilidad: los lectores de pantalla pueden saltar entre "landmarks".
+      - SEO: los buscadores entienden mejor dónde está el contenido principal.
+      - Mantenibilidad: cualquier desarrollador entiende la estructura mucho más rápido.
+    -->
+  </section>
+
+  <!--
+    SUBSECCIÓN 2.2 - SECCIÓN DE NOTICIAS (SECTION + ARTICLE)
+    <section> agrupa contenido relacionado (por ejemplo, "Noticias recientes").
+    Dentro usamos <article> para cada noticia independiente.
+  -->
+  <section id="noticias">
+    <h2>2. Sección de noticias con <code>&lt;section&gt;</code> y <code>&lt;article&gt;</code></h2>
+
+    <p>
+      Aquí simulamos un bloque de "Noticias recientes". Cada noticia se modela
+      como un <code>&lt;article&gt;</code>, porque tiene sentido por sí sola
+      (podría republicarse en otro contexto).
+    </p>
+
+    <!--
+      ARTICLE 1
+      Artículo independiente con su propio encabezado.
+    -->
+    <article>
+      <!--
+        <header> interno:
+        cabecera específica de este artículo (título, fecha, autor, etc.).
+      -->
+      <header>
+        <h3>Bootcamp Full Stack Python: nueva generación comienza</h3>
+        <p><small>Publicado el 18 de noviembre de 2025</small></p>
+      </header>
+
+      <p>
+        Una nueva generación de estudiantes inicia su viaje en el desarrollo web
+        con HTML5, CSS, JavaScript y Python. El enfoque práctico y orientado
+        a proyectos les permite avanzar desde cero hasta nivel trainee.
+      </p>
+
+      <!--
+        <footer> interno:
+        información de cierre específica de este artículo
+        (autor, vínculos relacionados, etc.).
+      -->
+      <footer>
+        <p><small>Autor: Equipo de Instructores</small></p>
+      </footer>
+    </article>
+
+    <!--
+      ARTICLE 2
+      Segundo artículo dentro de la misma sección de noticias.
+    -->
+    <article>
+      <header>
+        <h3>HTML5 como base de la web moderna</h3>
+        <p><small>Publicado el 10 de noviembre de 2025</small></p>
+      </header>
+
+      <p>
+        HTML5 trajo etiquetas semánticas, video y audio nativos, canvas y APIs
+        que permitieron construir experiencias web mucho más ricas e interactivas,
+        sin necesidad de plugins externos.
+      </p>
+
+      <footer>
+        <p><small>Autor: Coordinación Académica</small></p>
+      </footer>
+    </article>
+  </section>
+
+  <!--
+    SUBSECCIÓN 2.3 - SECCIÓN DE CURSOS (SECTION CON ARTICLE)
+    Otro ejemplo de <section> temática, esta vez para "Cursos".
+  -->
+  <section id="cursos">
+    <h2>3. Sección de cursos destacados</h2>
+
+    <p>
+      Esta sección representa un conjunto de cursos o formaciones. Cada curso
+      se escribe como un <code>&lt;article&gt;</code> porque podría mostrarse
+      en otros listados o páginas de forma independiente.
+    </p>
+
+    <article>
+      <header>
+        <h3>Curso: Fundamentos de HTML y CSS</h3>
+      </header>
+      <p>
+        Aprende a construir la estructura y el diseño básico de tus primeras
+        páginas web utilizando HTML5 y CSS3.
+      </p>
+      <ul>
+        <li>Duración: 4 semanas.</li>
+        <li>Enfoque: proyectos prácticos.</li>
+        <li>Nivel: principiante.</li>
+      </ul>
+    </article>
+
+    <article>
+      <header>
+        <h3>Curso: Introducción a Python para la Web</h3>
+      </header>
+      <p>
+        Descubre cómo usar Python en el backend y conectar tus páginas HTML
+        con lógica de negocio y bases de datos.
+      </p>
+      <ul>
+        <li>Duración: 6 semanas.</li>
+        <li>Framework: Django o Flask (según programa).</li>
+        <li>Nivel: principiante-intermedio.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!--
+    SUBSECCIÓN 2.4 - ASIDE: CONTENIDO COMPLEMENTARIO
+    <aside> representa información relacionada pero no central:
+    una bio breve, enlaces relacionados, publicidad, etc.
+  -->
+  <aside>
+    <h2>4. Barra lateral: contenido complementario</h2>
+
+    <p>
+      Este <code>&lt;aside&gt;</code> contiene información relacionada
+      pero no esencial para entender la página principal.
+    </p>
+
+    <section>
+      <h3>Sobre este sitio</h3>
+      <p>
+        Este sitio de ejemplo está construido para mostrar cómo usar
+        la estructura semántica de HTML5 en un contexto educativo.
+      </p>
+    </section>
+
+    <section>
+      <h3>Enlaces recomendados</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN - HTML</a></li>
+        <li><a href="https://html.spec.whatwg.org/" target="_blank">Especificación HTML Living Standard</a></li>
+      </ul>
+    </section>
+  </aside>
+
+  <!--
+    SUBSECCIÓN 2.5 - SECCIÓN DE CONTACTO
+    Ejemplo de otra sección temática con un identificador (#contacto).
+  -->
+  <section id="contacto">
+    <h2>5. Sección de contacto</h2>
+
+    <p>
+      Aquí irían los datos de contacto principales del sitio, por ejemplo
+      un formulario, un correo o enlaces a redes sociales.
+    </p>
+
+    <ul>
+      <li>Correo: <a href="mailto:info@bootcamp-ejemplo.com">info@bootcamp-ejemplo.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com" target="_blank">Perfil institucional</a></li>
+    </ul>
+  </section>
+
+  <!--
+    SUBSECCIÓN 2.6 - USO DE <div> CUANDO NO HAY ETIQUETA SEMÁNTICA ADECUADA
+    <div> sigue siendo útil cuando no existe una etiqueta semántica específica
+    o cuando solo necesitamos un contenedor para maquetar con CSS.
+  -->
+  <section>
+    <h2>6. ¿Cuándo usar <code>&lt;div&gt;</code> y cuándo etiquetas semánticas?</h2>
+
+    <p>
+      La regla general recomendada en el manual es:
+      <strong>usa etiquetas semánticas siempre que exista una que describa bien el contenido</strong>.
+    </p>
+
+    <p>
+      Por ejemplo:
+    </p>
+
+    <ul>
+      <li>Usa <code>&lt;header&gt;</code> en vez de <code>&lt;div id="header"&gt;</code>.</li>
+      <li>Usa <code>&lt;nav&gt;</code> en vez de <code>&lt;div class="menu"&gt;</code> para menús principales.</li>
+      <li>Usa <code>&lt;main&gt;</code> para el contenido principal.</li>
+      <li>Usa <code>&lt;article&gt;</code> para posts, noticias o fichas de contenido independiente.</li>
+    </ul>
+
+    <p>
+      <code>&lt;div&gt;</code> sigue siendo útil como contenedor genérico cuando:
+    </p>
+
+    <ul>
+      <li>No existe una etiqueta semántica adecuada.</li>
+      <li>Necesitas un wrapper extra solo para aplicar estilos o layout con CSS.</li>
+    </ul>
+
+    <!-- Ejemplo sencillo con <div> como contenedor de maquetación -->
+    <h3>Ejemplo práctico de uso de <code>&lt;div&gt;</code></h3>
+    <div>
+      <!--
+        Este <div> podría usarse para aplicar un fondo, márgenes o columnas
+        con CSS, sin aportar un significado semántico específico.
+      -->
+      <p>
+        Este bloque <code>&lt;div&gt;</code> sirve como contenedor genérico para
+        maquetación. No tiene un rol semántico propio, pero puede ayudar a
+        organizar el diseño visual.
+      </p>
+    </div>
+  </section>
+</main>
+
+<!--
+  SECTION 3:
+  PIE DE PÁGINA GLOBAL
+  <footer> global para información de cierre del documento.
+-->
+<footer>
+  <p>
+    Tema 9 - Estructura semántica global (HTML5) | Proyecto HTML5 - M2 AE2
+  </p>
+</footer>
+</body>
+</html>

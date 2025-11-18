@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--
+  Archivo: tema6-sintaxis-buenas-practicas.html
+  Proyecto: Manual M2 AE2 - Tema 6
+  Objetivo: Demostrar cómo escribir HTML con sintaxis clara y buenas prácticas,
+            aplicando los contenidos del Tema 6 del "Manual M2 AE2.pdf".
+  Nota: Crea este archivo en WebStorm (New > HTML File) dentro de tu proyecto HTML5.
+-->
+<html lang="es">
+<head>
+    <!--
+      Metadatos mínimos recomendados en HTML5.
+      - charset="utf-8" para mostrar correctamente tildes, ñ y caracteres especiales.
+      - <title> descriptivo para pestañas del navegador e historial.
+    -->
+    <meta charset="utf-8">
+    <title>Tema 6 - Sintaxis clara y buenas prácticas en HTML</title>
+</head>
+<body>
+<!--
+  SECTION 1:
+  Encabezado principal de la página.
+  Usamos <header> + <h1>, siguiendo la idea de un solo <h1> por documento.
+-->
+<header>
+    <h1>Cómo se escribe HTML: sintaxis clara y buenas prácticas</h1>
+    <p>
+        En esta página veremos ejemplos prácticos de cómo escribir HTML ordenado,
+        bien anidado y fácil de leer, tal como se recomienda en el Tema 6 del manual.
+    </p>
+</header>
+
+<!--
+  SECTION 2:
+  Contenido principal de la página.
+  Usamos <main> para envolver el contenido principal de este documento.
+-->
+<main>
+    <!--
+      SUBSECCIÓN 2.1 - QUÉ VE EL NAVEGADOR VS. QUÉ VES TÚ
+      El navegador ignora muchos espacios y saltos de línea;
+      las buenas prácticas son principalmente para humanos (legibilidad).
+    -->
+    <section>
+        <h2>1. Qué le importa al navegador y qué nos importa a nosotros</h2>
+
+        <p>
+            El navegador necesita que las etiquetas estén correctamente escritas,
+            pero no le importa tanto si el código está en una sola línea o bien ordenado.
+            En cambio, a nosotros sí nos importa que el HTML sea legible.
+        </p>
+
+        <!-- Ejemplo de HTML válido pero difícil de leer -->
+        <h3>Ejemplo de código válido pero desordenado</h3>
+        <p>Este bloque funciona, pero es muy incómodo de leer y mantener:</p>
+
+        <!--
+          Usamos <pre><code> para mostrar el ejemplo de "mal formato"
+          sin que el navegador lo interprete como HTML real.
+        -->
+        <pre>
+<code>&lt;body&gt;&lt;header&gt;&lt;h1&gt;Mi sitio&lt;/h1&gt;&lt;/header&gt;&lt;main&gt;&lt;section&gt;&lt;h2&gt;Noticias&lt;/h2&gt;&lt;p&gt;Texto de prueba&lt;/p&gt;&lt;/section&gt;&lt;/main&gt;&lt;/body&gt;</code>
+      </pre>
+
+        <p>
+            El navegador puede entender esto, pero para un humano es muy difícil ver
+            la estructura. Por eso aplicamos buenas prácticas de sintaxis: sangrías,
+            saltos de línea y orden.
+        </p>
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.2 - INDENTACIÓN Y ESPACIOS EN BLANCO
+      Aquí mostramos cómo usar sangría (indentación) y líneas en blanco
+      para que el código "respire".
+    -->
+    <section>
+        <h2>2. Indentación y espacios en blanco</h2>
+
+        <p>
+            Una de las recomendaciones del manual es usar una sangría consistente
+            (por ejemplo, 2 espacios) para mostrar qué elementos están dentro de otros.
+        </p>
+
+        <h3>Código mejorado con buena indentación</h3>
+
+        <pre>
+<code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Mi sitio&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Noticias&lt;/h2&gt;
+      &lt;p&gt;Texto de prueba&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code>
+      </pre>
+
+        <!--
+          Observa cómo:
+          - Cada nivel interno tiene 2 espacios de sangría.
+          - Dejamos una línea en blanco entre bloques grandes (<header>, <main>, etc.).
+          Esto no cambia cómo se ve la página, pero sí mejora MUCHÍSIMO la lectura del código.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.3 - ANIDACIÓN CORRECTA DE ETIQUETAS
+      Regla de oro: si abres una etiqueta dentro de otra, se cierra dentro de ella.
+    -->
+    <section>
+        <h2>3. Anidación correcta de etiquetas</h2>
+
+        <p>
+            La anidación correcta es fundamental. Si abres un elemento dentro de otro,
+            debes cerrarlo antes de cerrar el elemento padre.
+        </p>
+
+        <h3>Ejemplo de anidación incorrecta</h3>
+        <pre>
+<code>&lt;p&gt;Este es un &lt;strong&gt;text o importante&lt;/p&gt;&lt;/strong&gt;</code>
+      </pre>
+
+        <p>Y ahora, la versión correcta:</p>
+
+        <pre>
+<code>&lt;p&gt;Este es un &lt;strong&gt;texto importante&lt;/strong&gt;&lt;/p&gt;</code>
+      </pre>
+
+        <!--
+          Visualiza las etiquetas como cajas:
+          - Abres la caja <p>.
+          - Dentro abres la caja <strong>.
+          - Debes cerrar primero </strong> y luego </p>.
+          Seguir esta regla evita errores extraños en el navegador.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.4 - ATRIBUTOS: COMILLAS Y ORDEN
+      Mostramos la sintaxis recomendada:
+      - Siempre en minúsculas.
+      - Formato nombre="valor".
+      - Separados por espacios.
+    -->
+    <section>
+        <h2>4. Buenas prácticas con atributos</h2>
+
+        <p>
+            Los atributos se escriben dentro de la etiqueta de apertura, normalmente
+            siguiendo el formato <code>nombre="valor"</code> y en minúsculas.
+        </p>
+
+        <h3>Ejemplo de etiqueta con varios atributos bien escritos</h3>
+        <pre>
+<code>&lt;a href="https://misitio.com"
+   id="enlace-inicio"
+   class="btn btn-primario"
+   title="Volver a la página de inicio"&gt;
+  Ir al inicio
+&lt;/a&gt;</code>
+      </pre>
+
+        <!--
+          Buenas prácticas aplicadas:
+          - Etiqueta en minúsculas: <a>.
+          - Atributos en minúsculas: href, id, class, title.
+          - Valores entre comillas: "..." (siempre, aunque a veces el navegador acepte sin comillas).
+          - Cada atributo separado por un espacio.
+        -->
+
+        <h3>Ejemplo con atributo booleano</h3>
+        <p>
+            Algunos atributos son booleanos: basta con su presencia para indicar "verdadero".
+        </p>
+
+        <pre>
+<code>&lt;input type="checkbox" checked&gt; Acepto los términos</code>
+      </pre>
+
+        <!--
+          En este caso, el simple hecho de que "checked" esté presente
+          indica que la casilla está marcada al cargar la página.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.5 - ELEMENTOS VACÍOS (VOID ELEMENTS)
+      Mostramos cómo escribir correctamente elementos que no llevan tag de cierre.
+    -->
+    <section>
+        <h2>5. Elementos vacíos (void elements)</h2>
+
+        <p>
+            Algunos elementos de HTML no tienen contenido interno y, por lo tanto,
+            no usan etiqueta de cierre. Se les llama <strong>elementos vacíos</strong> (void).
+        </p>
+
+        <p>Ejemplos típicos:</p>
+
+        <ul>
+            <li><code>&lt;img&gt;</code> para imágenes.</li>
+            <li><code>&lt;br&gt;</code> para saltos de línea.</li>
+            <li><code>&lt;hr&gt;</code> para una línea horizontal.</li>
+            <li><code>&lt;meta&gt;</code> y <code>&lt;link&gt;</code> en el <code>&lt;head&gt;</code>.</li>
+        </ul>
+
+        <h3>Ejemplo correcto de uso</h3>
+        <pre>
+<code>&lt;img src="img/logo.png" alt="Logotipo del sitio"&gt;
+&lt;br&gt;
+&lt;hr&gt;</code>
+      </pre>
+
+        <!--
+          Nota: En HTML5 no necesitamos escribir </img> ni </br> ni </hr>.
+          Solo la etiqueta de apertura es suficiente para estos elementos vacíos.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.6 - COMENTARIOS Y ORGANIZACIÓN
+      Los comentarios ayudan a entender el código sin afectar lo que ve el usuario.
+    -->
+    <section>
+        <h2>6. Comentarios para organizar y documentar el código</h2>
+
+        <p>
+            Tal como se explica en el manual, los comentarios son notas para humanos
+            que el navegador ignora. Se escriben con la sintaxis:
+            <code>&lt;!-- comentario --&gt;</code>.
+        </p>
+
+        <h3>Ejemplo de comentarios útiles</h3>
+        <pre>
+<code>&lt;!-- Sección principal de noticias --&gt;
+&lt;section id="noticias"&gt;
+  &lt;h2&gt;Noticias recientes&lt;/h2&gt;
+
+  &lt;!-- Artículo 1 --&gt;
+  &lt;article&gt;
+    &lt;h3&gt;Lanzamiento del nuevo curso&lt;/h3&gt;
+    &lt;p&gt;Detalles del lanzamiento...&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;!-- Fin de sección de noticias --&gt;
+&lt;/section&gt;</code>
+      </pre>
+
+        <!--
+          Buenas prácticas con comentarios:
+          - Úsalos para explicar bloques, no cada línea.
+          - No guardes contraseñas ni datos sensibles.
+          - Revísalos si cambias el código para que no queden desactualizados.
+        -->
+    </section>
+
+    <!--
+      SUBSECCIÓN 2.7 - BUENAS PRÁCTICAS DE ESTILO RESUMIDAS
+      Minúsculas, cierre de etiquetas, evitar "divitis", poco estilo en línea, etc.
+    -->
+    <section>
+        <h2>7. Resumen de buenas prácticas de estilo</h2>
+
+        <ul>
+            <li>Usar <strong>minúsculas</strong> en nombres de etiquetas y atributos.</li>
+            <li>Cerrar siempre las etiquetas que lo requieran, como <code>&lt;p&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;section&gt;</code>.</li>
+            <li>Usar <strong>indentación consistente</strong> (ej. 2 espacios por nivel).</li>
+            <li>No abusar de <code>&lt;div&gt;</code> cuando existen etiquetas semánticas (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, etc.).</li>
+            <li>Evitar llenar todo de <code>style="..."</code>; preferir CSS en archivos separados.</li>
+            <li>Usar nombres de clases que describan el contenido (ej. <code>noticia-principal</code>) y no solo la apariencia (ej. <code>texto-rojo</code>).</li>
+        </ul>
+
+        <!--
+          Estos puntos están alineados con las recomendaciones del manual:
+          escribir HTML pensando en que otros desarrolladores (y tu yo del futuro)
+          deben entender fácilmente el código.
+        -->
+    </section>
+</main>
+
+<!--
+  SECTION 3:
+  Pie de página simple para cerrar el documento de ejemplo.
+-->
+<footer>
+    <p>
+        Tema 6 - Sintaxis clara y buenas prácticas | Proyecto HTML5 - M2 AE2
+    </p>
+</footer>
+</body>
+</html>
