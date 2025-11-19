@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--
+  Actividad: "Organiza tu Página Web"
+  Tema elegido: Cambio Climático
+  Objetivo: Aplicar la estructura semántica (header, nav, main, section, footer)
+            y el uso de encabezados, párrafos y listas (ul/ol/li).
+-->
+<html lang="es">
+<head>
+    <!--
+      Paso 2: Dentro de <head> agregamos metadatos mínimos.
+      - <meta charset="utf-8"> para usar codificación UTF-8 (tildes, ñ, etc.).
+      - <title> para poner el título que se verá en la pestaña del navegador.
+    -->
+    <meta charset="utf-8">
+    <title>Cambio Climático – Actividad M2 AE2</title>
+
+    <!--
+      Extra muy recomendable:
+      meta viewport para que la página se vea bien en móviles.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!--
+  Paso 3: Usar <header> para el encabezado de la página.
+  Aquí colocamos el título principal y una breve descripción.
+-->
+<header>
+    <!--
+      <h1> → encabezado principal de la página.
+      Según buenas prácticas, usamos solo UN <h1> por documento.
+    -->
+    <h1>Cambio Climático</h1>
+
+    <!--
+      <p> → párrafo introductorio que explica de qué trata la página.
+    -->
+    <p>
+        Esta página fue creada como parte de la actividad
+        <strong>“Organiza tu Página Web”</strong> para practicar estructura semántica
+        y contenido claro utilizando HTML5.
+    </p>
+</header>
+
+<!--
+  Paso 4: Agregar <nav> para la sección de navegación.
+  Dentro colocamos enlaces (<a>) que llevan a distintas partes de la página
+  usando identificadores (#que-es, #causas, #acciones).
+-->
+<nav>
+    <ul>
+        <!--
+          Cada <li> contiene un enlace interno (<a href="#...">) que lleva a una sección.
+        -->
+        <li><a href="#que-es">¿Qué es el cambio climático?</a></li>
+        <li><a href="#causas">Causas principales</a></li>
+        <li><a href="#acciones">¿Qué podemos hacer?</a></li>
+    </ul>
+</nav>
+
+<!--
+  Paso 5: Usar <main> para agrupar el contenido principal.
+  Dentro de <main> crearemos al menos dos <section> distintas.
+-->
+<main>
+    <!--
+      SECTION 1
+      Paso 6: Dentro de cada <section> usar encabezados (<h1> o <h2>)
+      y párrafos (<p>) para organizar la información.
+    -->
+    <section id="que-es">
+        <!--
+          <h2> → encabezado de segundo nivel. Presenta el tema de esta sección.
+        -->
+        <h2>¿Qué es el cambio climático?</h2>
+
+        <!--
+          <p> → párrafo con información descriptiva.
+          Aquí explicamos el concepto en un lenguaje claro.
+        -->
+        <p>
+            El cambio climático es la variación a largo plazo de las temperaturas
+            y los patrones del clima en la Tierra. Aunque el clima de nuestro planeta
+            siempre ha cambiado, en las últimas décadas este proceso se ha acelerado
+            principalmente por la actividad humana.
+        </p>
+
+        <p>
+            El aumento de gases de efecto invernadero, como el dióxido de carbono (CO₂),
+            hace que la atmósfera retenga más calor de lo normal. Eso provoca fenómenos
+            como olas de calor más intensas, deshielo de glaciares y cambios en los
+            patrones de lluvia.
+        </p>
+    </section>
+
+    <!--
+      SECTION 2
+      Paso 5 y 6: Segunda sección dentro de <main> con su propio encabezado
+      y párrafos explicativos.
+    -->
+    <section id="causas">
+        <h2>Causas principales del cambio climático</h2>
+
+        <p>
+            Muchas de las causas del cambio climático están relacionadas con cómo
+            producimos energía, nos transportamos y usamos los recursos naturales.
+            A continuación se muestran algunas de las causas más importantes:
+        </p>
+
+        <!--
+          Paso 7: Incluir al menos una lista NO ordenada.
+          Usamos <ul> (unordered list) + <li> para listar causas sin un orden específico.
+        -->
+        <ul>
+            <li>
+                <strong>Quema de combustibles fósiles:</strong>
+                uso intensivo de carbón, petróleo y gas para generar electricidad
+                y mover vehículos.
+            </li>
+            <li>
+                <strong>Deforestación:</strong>
+                tala masiva de bosques que capturan CO₂, reduciendo la capacidad
+                del planeta para absorber este gas.
+            </li>
+            <li>
+                <strong>Agricultura intensiva:</strong>
+                ciertas prácticas agrícolas y ganaderas liberan grandes cantidades
+                de metano y otros gases de efecto invernadero.
+            </li>
+            <li>
+                <strong>Consumo excesivo:</strong>
+                producción y desecho de bienes a gran escala, lo que aumenta
+                la huella de carbono global.
+            </li>
+        </ul>
+    </section>
+
+    <!--
+      SECTION 3
+      Paso 5 y 6: Tercera sección opcional para enriquecer el contenido.
+      Aquí aprovechamos para cumplir el Paso 8 (lista ordenada).
+    -->
+    <section id="acciones">
+        <h2>¿Qué podemos hacer para enfrentar el cambio climático?</h2>
+
+        <p>
+            Aunque el problema es global, cada persona puede aportar desde su realidad.
+            A nivel individual, familiar o comunitario, hay muchas acciones que ayudan
+            a reducir nuestra huella de carbono.
+        </p>
+
+        <!--
+          Paso 8: Incluir al menos una lista ORDENADA.
+          Usamos <ol> (ordered list) + <li> para listar pasos o prioridades.
+        -->
+        <ol>
+            <li>
+                <strong>Reducir:</strong> consumir solo lo necesario, evitar el desperdicio
+                y preferir productos durables.
+            </li>
+            <li>
+                <strong>Reutilizar:</strong> dar una segunda vida a objetos en lugar de
+                desecharlos inmediatamente.
+            </li>
+            <li>
+                <strong>Reciclar:</strong> separar residuos (papel, vidrio, plásticos, metales)
+                para que puedan ser procesados y convertidos en nuevos productos.
+            </li>
+            <li>
+                <strong>Ahorrar energía:</strong> apagar luces y aparatos que no se usan,
+                elegir ampolletas eficientes y aprovechar la luz natural.
+            </li>
+            <li>
+                <strong>Optar por transportes sostenibles:</strong> caminar, usar bicicleta
+                o transporte público siempre que sea posible.
+            </li>
+        </ol>
+
+        <!--
+          Este contenido cumple:
+          - Uso de encabezado (<h2>).
+          - Uso de párrafos (<p>).
+          - Uso de lista ordenada (<ol>) con varios ítems (<li>).
+        -->
+    </section>
+</main>
+
+<!--
+  Paso 9: Finalizar la página con la etiqueta <footer>.
+  Aquí agregamos información de cierre: autor, contexto y año.
+-->
+<footer>
+    <p>
+        Página creada como resolución de la actividad
+        <strong>“Organiza tu Página Web”</strong> – M2 AE2 · Bootcamp Full Stack Python.
+    </p>
+    <p>
+        &copy; 2025 – Trabajo práctico de estudiante.
+        Contacto: <a href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a>
+    </p>
+</footer>
+</body>
+</html>
