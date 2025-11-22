@@ -1,0 +1,53 @@
+/* Se recomienda que el orden de los estilos sea el siguiente:
+    1) Etiquetas
+    2) Clases
+    3) Identificadores (ID)
+ */
+
+/* Estilos - Etiquetas
+---------------------------------
+*/
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos - Clases
+---------------------------------
+*/
+.p_rojo_grande{
+    color: red;
+    font-size: 20px;
+}
+
+.p_fondo_amarillo_centrado{
+    background-color: yellow;
+    text-align: center;
+}
+
+.e_subrayado_azul{
+    text-decoration: underline;
+    background-color: lightblue;
+}
+
+.p_fondo_rosa_texto_rojo{
+    color: red;
+    background-color: #ffc0cb;
+}
+
+.p_fondo_gris_texto_naranja{
+    color: orange;
+    background-color: grey;
+}
+/* Estilos - ID
+---------------------------------
+*/
+#p_especial{
+    color: white;
+    background-color: black;
+}
+
+#e_especial{
+    background-color: grey;
+    color: white;
+}
