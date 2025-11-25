@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Uso de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Luego de conectarse a Google Fonts se puede incluir el código CSS propio-->
+  <link rel="stylesheet" href="estilos.css">
+  <title>Flexbox</title>
+</head>
+<body>
+<div class="container">
+  <h1>Demostración Práctica del uso de Flexbox</h1>
+  <p class="subtitle">Proyecto web realizado para experimentar con las diferentes configuraciones para <strong>flexbox</strong>.
+    <br><strong>Instructor</strong> Felipe Cuevas | Bootcamp Full Stack Python <strong>M2 AE3</strong></p>
+  <div class="controls">
+    <div class="control-group">
+      <label>🔲 Activar <strong>Display</strong>:</label>
+      <div class="button-group">
+        <button onclick="setDisplay('flex')" class="active" id="btn-flex">flex</button>
+        <button onclick="setDisplay('block')" id="btn-block">block (sin flex)</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>↔️ Configurar <strong>Flex-direction</strong>:</label>
+      <div class="button-group">
+        <button onclick="setDirection('row')" class="active" id="btn-row">row</button>
+        <button onclick="setDirection('row-reverse')" id="btn-row-reverse">row-reverse</button>
+        <button onclick="setDirection('column')" id="btn-column">column</button>
+        <button onclick="setDirection('column-reverse')" id="btn-column-reverse">column-reverse</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>🔄 Configurar <strong>Flex-wrap</strong>:</label>
+      <div class="button-group">
+        <button onclick="setWrap('nowrap')" class="active" id="btn-nowrap">nowrap</button>
+        <button onclick="setWrap('wrap')" id="btn-wrap">wrap</button>
+        <button onclick="setWrap('wrap-reverse')" id="btn-wrap-reverse">wrap-reverse</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>⬆️ Configurar <strong>Align-items</strong> <em>(alineación en eje transversal)</em>:</label>
+      <div class="button-group">
+        <button onclick="setAlignItems('flex-start')" class="active" id="btn-items-start">flex-start</button>
+        <button onclick="setAlignItems('center')" id="btn-items-center">center</button>
+        <button onclick="setAlignItems('flex-end')" id="btn-items-end">flex-end</button>
+        <button onclick="setAlignItems('stretch')" id="btn-items-stretch">stretch</button>
+        <button onclick="setAlignItems('baseline')" id="btn-items-baseline">baseline</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>📦 Configurar <strong>Align-content</strong> <em>(alineación de múltiples líneas)</em>:</label>
+      <div class="button-group">
+        <button onclick="setAlignContent('flex-start')" class="active" id="btn-content-start">flex-start</button>
+        <button onclick="setAlignContent('center')" id="btn-content-center">center</button>
+        <button onclick="setAlignContent('flex-end')" id="btn-content-end">flex-end</button>
+        <button onclick="setAlignContent('stretch')" id="btn-content-stretch">stretch</button>
+        <button onclick="setAlignContent('space-between')" id="btn-content-between">space-between</button>
+        <button onclick="setAlignContent('space-around')" id="btn-content-around">space-around</button>
+        <button onclick="setAlignContent('space-evenly')" id="btn-content-evenly">space-evenly</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-area">
+    <div class="flex-container" id="flexContainer">
+      <div class="axis-label main-axis" id="mainAxis">Eje principal →</div>
+      <div class="axis-label cross-axis" id="crossAxis">Eje transversal ↓</div>
+
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+      <div class="flex-item">Item 4</div>
+      <div class="flex-item">Item 5</div>
+      <div class="flex-item">Item 6</div>
+    </div>
+  </div>
+
+  <div class="code-display" id="codeDisplay">
+    <div><span class="property">display</span>: <span class="value">flex</span>;</div>
+    <div><span class="property">flex-direction</span>: <span class="value">row</span>;</div>
+    <div><span class="property">flex-wrap</span>: <span class="value">nowrap</span>;</div>
+    <div><span class="property">align-items</span>: <span class="value">flex-start</span>;</div>
+    <div><span class="property">align-content</span>: <span class="value">flex-start</span>;</div>
+  </div>
+
+  <div class="info-box">
+    <strong>Explicación:</strong>
+    <span id="infoText">Flexbox está activado. Los items se alinean horizontalmente (row) sin salto de línea (nowrap).</span>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

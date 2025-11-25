@@ -1,0 +1,75 @@
+/* Acá las buenas prácticas dictan que el orden para programar estilos es:
+    - Desde lo más genérico hacia lo más específico
+    - Etiquetas, clases, identificadores
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f0f2f5;
+    color: #333333;
+}
+
+main{
+    padding: 20px;
+}
+
+.sitio_header, .sitio_footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.sitio_header{
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.sitio_header h1{
+    font-size: 32px;
+    margin: 0;
+}
+
+.sitio_header p{
+    margin: 0;
+    font-size: 16px;
+    color: #555555;
+}
+
+.tarjeta{
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.tarjeta p{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tarjeta ul, .tarjeta ol{
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.tarjeta li{
+    margin-bottom: 6px;
+}

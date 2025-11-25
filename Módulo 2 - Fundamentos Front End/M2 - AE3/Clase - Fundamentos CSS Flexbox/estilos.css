@@ -1,0 +1,110 @@
+/* ===========================
+   Estilos base globales
+   =========================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f0f2f5;
+    color: #333333;
+}
+
+/* ===========================
+   Layout general
+   =========================== */
+
+.sitio-header,
+.sitio-footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* Header con Flexbox */
+.sitio-header {
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.sitio-header h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.sitio-header p {
+    margin: 0;
+    font-size: 16px;
+    color: #555555;
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+
+/* Tarjetas de contenido (secciones) */
+.tarjeta {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.tarjeta p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tarjeta ul,
+.tarjeta ol {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.tarjeta li {
+    margin-bottom: 6px;
+}
+
+/* Footer */
+.sitio-footer {
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #666666;
+}
+
+.sitio-footer h3{
+    font-size: 15px;
+    color: #666666;
+}
+
+/* ===========================
+   Ajustes responsivos simples
+   =========================== */
+
+@media (max-width: 600px) {
+    .sitio-header h1 {
+        font-size: 24px;
+    }
+
+    .tarjeta {
+        padding: 16px 18px;
+        margin: 16px auto;
+    }
+}
