@@ -1,0 +1,426 @@
+/* ===========================
+   PALETA DE COLORES KIGEN
+   =========================== */
+
+:root {
+    --green-50:  #C5FFC9;
+    --green-100: #39f4c1;
+    --green-200: #34e2b3;
+    --green-300: #2ecba0;
+    --green-400: #26b08b;
+    --green-500: #1f9474;
+    --green-600: #17775d; /* color base */
+    --green-700: #0f5a46;
+    --green-800: #073e2f;
+    --green-900: #022219;
+    --green-950: #01140e;
+
+    --bg-body: var(--green-50);
+    --bg-card: #ffffff;
+    --text-main: var(--green-950);
+    --text-muted: #19351c;
+    --accent: var(--green-600);
+    --accent-soft: var(--green-100);
+    --border-soft: rgba(0, 34, 3, 0.08);
+}
+
+/* ===========================
+   RESETEO BÁSICO
+   =========================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+}
+
+/* Eliminar márgenes por defecto y ajustar tipografía */
+h1,
+h2,
+h3,
+p,
+ul,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Links generales */
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   LAYOUT GENERAL
+   =========================== */
+
+.contenedor {
+    width: min(1120px, 100% - 2.5rem);
+    margin-inline: auto;
+}
+
+main {
+    padding-block: 2.5rem 3.5rem;
+}
+
+/* ===========================
+   CABECERA
+   =========================== */
+
+.sitio-header {
+    background: radial-gradient(circle at top left, var(--green-300), var(--green-600));
+    color: #f4fff5;
+    padding-block: 1.75rem 2.75rem;
+}
+
+.header-medio {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.sitio-header h1 {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    line-height: 1.2;
+}
+
+.lead {
+    max-width: 40rem;
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+.header-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    background: var(--green-800);
+    border: 1px solid rgba(197, 255, 201, 0.4);
+}
+
+/* ===========================
+   SECCIÓN: OVERVIEW
+   =========================== */
+
+.overview {
+    padding-block: 2.25rem;
+}
+
+.overview-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.overview h2 {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--green-800);
+}
+
+/* ===========================
+   SECCIÓN: DUELO
+   =========================== */
+
+.duel {
+    padding-block: 1rem 2.75rem;
+}
+
+.duel-grid {
+    display: grid;
+    gap: 1.75rem;
+}
+
+/* Tarjetas de academias */
+
+.academy-card {
+    background-color: var(--bg-card);
+    border-radius: 1.25rem;
+    padding: 1.5rem 1.5rem 1.75rem;
+    border: 1px solid var(--border-soft);
+    box-shadow:
+            0 14px 30px rgba(0, 21, 1, 0.06),
+            0 2px 6px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.academy-card.oracle {
+    border-top: 4px solid var(--green-500);
+}
+
+.academy-card.aws {
+    border-top: 4px solid var(--green-300);
+}
+
+.academy-header {
+    display: flex;
+    gap: 1.1rem;
+    align-items: center;
+}
+
+.academy-logo-wrapper {
+    flex-shrink: 0;
+    /* sin fondo de color */
+    background: transparent;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+
+/* aquí estilizas SOLO la imagen */
+.academy-logo {
+    display: block;
+    max-width: 64px;   /* o el tamaño que quieras */
+    height: auto;
+    border-radius: 0.9rem;  /* bordes redondeados de la imagen */
+}
+
+.academy-name {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--green-900);
+}
+
+.academy-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.academy-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.academy-section h3 {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--green-800);
+}
+
+.section-intro {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Lista de rutas (pills) */
+
+.pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.pill-item {
+    font-size: 0.84rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background-color: var(--accent-soft);
+    color: var(--green-900);
+    border: 1px solid rgba(0, 97, 19, 0.2);
+}
+
+/* Certificación: grid de badges */
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+
+.badge-card {
+    background: #f7fff8;
+    border-radius: 0.9rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 61, 7, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.badge-image {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.badge-card figcaption {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Fortalezas y link */
+
+.simple-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding-left: 1rem;
+}
+
+.simple-list li {
+    position: relative;
+}
+
+.simple-list li::before {
+    content: "•";
+    position: absolute;
+    left: -0.8rem;
+    color: var(--accent);
+}
+
+.academy-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.6rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: var(--accent);
+    color: #f4fff5;
+    border: 1px solid rgba(0, 21, 1, 0.1);
+    text-decoration: none;
+}
+
+.academy-link:hover {
+    background-color: var(--green-700);
+}
+
+/* ===========================
+   SECCIÓN: RESUMEN
+   =========================== */
+
+.summary {
+    padding-block: 2.25rem 0;
+}
+
+.summary-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.summary h2 {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--green-900);
+}
+
+.summary-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.summary-column {
+    background-color: rgba(0, 97, 19, 0.04);
+    border-radius: 1rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--green-300);
+}
+
+.summary-column h3 {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 1.02rem;
+    margin-bottom: 0.4rem;
+    color: var(--green-900);
+}
+
+.summary-column p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.resumen-nota {
+    font-size: 0.9rem;
+    color: var(--green-50);
+    background: var(--green-700);
+    border-radius: 0.9rem;
+    padding: 0.6rem 0.8rem;
+    border: 1px dashed var(--green-100);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.site-footer {
+    border-top: 1px solid rgba(0, 34, 3, 0.06);
+    padding-block: 1.2rem 1.6rem;
+    background: radial-gradient(circle at top left, var(--green-300), var(--green-600));
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--green-50);
+}
+
+.footer-meta {
+    opacity: 0.9;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (min-width: 720px) {
+    .duel-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
