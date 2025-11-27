@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Demo de Bootstrap</title>
+</head>
+<body class="bg-light">
+<!-- Encabezado principal -->
+<header class="bg-primary text-white py-3">
+  <div class="container">
+    <h1 class="mb-0">Mi primera página web con Bootstrap</h1>
+    <p class="mb-0 small">Demostración en vivo (live coding) de programación web con el framework Bootstrap 5.3 a través de conexión por CDN.</p>
+  </div>
+</header>
+<!-- Cuerpo de la página -->
+<main class="container my-5">
+  <!-- Sección: qué es Bootstrap + historia -->
+  <section class="mb-5">
+    <div class="row g-4">
+      <!-- ¿Qué es Bootstrap? -->
+      <article class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h2 class="card-title h4">
+              ¿Qué es Bootstrap?
+            </h2>
+            <p class="card-text">
+              <strong>Bootstrap</strong> es un framework de
+              código abierto que nos entrega un conjunto de
+              estilos y componentes ya listos para usar en
+              nuestras páginas web.
+            </p>
+            <p class="card-text">
+              En lugar de escribir todo el CSS desde cero,
+              aprovechamos sus clases para crear sitios
+              modernos, responsivos y ordenados en mucho menos
+              tiempo.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Historia breve -->
+      <article class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h2 class="card-title h4">
+              Un poco de historia
+            </h2>
+            <p class="card-text">
+              Bootstrap nació como una herramienta interna en
+              Twitter, creada para unificar el diseño de las
+              aplicaciones que usaban dentro de la empresa.
+            </p>
+            <p class="card-text mb-1">
+              Después fue liberado como proyecto de código
+              abierto y hoy es uno de los frameworks más usados
+              en el mundo del desarrollo web.
+            </p>
+            <ul class="small mb-0">
+              <li>Basado en HTML, CSS y JavaScript.</li>
+              <li>Se actualiza constantemente.</li>
+              <li>Cuenta con documentación muy completa.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sección: beneficios -->
+  <section class="mb-5">
+    <div class="row g-4">
+      <article class="col-lg-7">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h2 class="card-title h4">
+              Beneficios de usar Bootstrap 💡
+            </h2>
+            <p class="card-text">
+              Estas son algunas razones por las que tantos
+              equipos lo utilizan en proyectos reales:
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Diseños responsivos</strong> listos para
+                funcionar en celular, tablet y computador.
+              </li>
+              <li class="list-group-item">
+                <strong>Componentes prearmados</strong>:
+                botones, formularios, tarjetas, navbars, alertas
+                y mucho más.
+              </li>
+              <li class="list-group-item">
+                <strong>Ahorro de tiempo</strong>: menos código
+                CSS a mano, más foco en la lógica de tu
+                aplicación.
+              </li>
+              <li class="list-group-item">
+                <strong>Consistencia visual</strong>: todo se ve
+                ordenado y profesional desde el primer momento.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bloque: cómo lo estamos usando aquí -->
+      <article class="col-lg-5">
+        <div class="card border-primary h-100">
+          <div class="card-header bg-primary text-white">
+            ¿Cómo estamos usando Bootstrap aquí?
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Esta misma página está usando Bootstrap gracias a
+              la etiqueta
+              <code>&lt;link&gt;</code> que agregamos en el
+              <strong>&lt;head&gt;</strong>.
+            </p>
+            <p class="card-text small mb-2">
+              En el código se ve así:
+            </p>
+            <pre class="bg-light p-2 small border rounded">
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"&gt;</pre>
+            <p class="card-text small mb-0">
+              Gracias a esa línea podemos usar clases como
+              <code>container</code>, <code>row</code>,
+              <code>col-md-6</code>, <code>card</code> y
+              <code>btn</code> sin escribir el CSS desde cero.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Llamado a la acción -->
+  <section class="text-center">
+    <p class="mb-3">
+      Si llegaste hasta aquí, ya viste en acción lo más
+      importante de este live coding:
+      <strong>
+        qué es Bootstrap, de dónde viene, por qué conviene usarlo
+        y cómo conectarlo vía CDN.
+      </strong>
+    </p>
+    <a href="https://getbootstrap.com/"
+       class="btn btn-primary btn-lg" target="_blank">
+      ¡Sigamos practicando con Bootstrap!
+    </a>
+  </section>
+</main>
+<!-- Pie de página final -->
+<footer class="border-top py-3 mt-5">
+  <div class="container text-center small text-muted">
+    <p>&copy; Demo creada en clase para practicar Bootstrap - Módulo 2 AE4</p>
+  </div>
+</footer>
+</body>
+</html>
