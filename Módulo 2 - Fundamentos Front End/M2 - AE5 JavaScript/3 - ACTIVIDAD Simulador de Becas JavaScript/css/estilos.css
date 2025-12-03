@@ -1,0 +1,61 @@
+/* Paleta base: Rose of Sharon */
+:root {
+    --rose-50:  #FFEDE9;
+    --rose-100: #FFD3C7;
+    --rose-200: #FFA88B;
+    --rose-300: #FF7E36;
+    --rose-400: #E16600;
+    --rose-500: #BD5500;
+    --rose-600: #A94B00;
+    --rose-700: #8E3E00;
+    --rose-800: #703000;
+    --rose-900: #512100;
+    --rose-1000: #421900;
+    --rose-1100: #331200;
+    --rose-1200: #220A00;
+}
+
+/* Fondo general con degradado oscuro */
+body {
+    background: radial-gradient(
+            circle at top left,
+            var(--rose-700),
+            var(--rose-1200)
+    );
+}
+
+/* Cabecera cálida */
+.hero-beca {
+    background: linear-gradient(
+            90deg,
+            var(--rose-400),
+            var(--rose-700)
+    );
+}
+
+/* Tarjeta del formulario: degradado suave y claro */
+.card-panel {
+    background: linear-gradient(
+            135deg,
+            var(--rose-50),
+            var(--rose-200)
+    );
+}
+
+/* Panel de resultados: degradado intenso */
+.resultado-panel {
+    background: linear-gradient(
+            135deg,
+            var(--rose-600),
+            var(--rose-900)
+    );
+}
+
+/* Pie de página con degradado oscuro */
+.footer-gradiente {
+    background: linear-gradient(
+            90deg,
+            var(--rose-1000),
+            var(--rose-1200)
+    );
+}

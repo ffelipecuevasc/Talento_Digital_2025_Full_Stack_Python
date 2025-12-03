@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tablón de Anuncios</title>
+
+    <!-- Bootstrap 5.3: hoja de estilos desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+</head>
+<body>
+<!-- Cabecera con estilos y colores de Bootstrap -->
+<header class="py-4 bg-light mb-4">
+    <div class="container">
+        <h1 class="h3 mb-1">Tablón de Anuncios Responsivos</h1>
+        <p class="text-muted mb-0">
+            Ejemplo práctico del sistema de grillas <strong>responsivas</strong> de Bootstrap 5.3
+        </p>
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="py-3">
+    <div class="container">
+        <!-- Fila de tarjetas -->
+        <div class="row g-4">
+
+            <!-- Columna - Tablón de Anuncios 1-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Anuncio 1 · Taller de HTML</h2>
+                        <p class="card-text">
+                            Introducción práctica a etiquetas, estructura básica y buenas
+                            prácticas en HTML5 para principiantes.
+                        </p>
+                        <p class="card-text">
+                <span class="badge bg-success-subtle text-success-emphasis">
+                  Nivel: Inicial
+                </span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Columna - Tablón de Anuncios 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Anuncio 2 · CSS y diseño</h2>
+                        <p class="card-text">
+                            Aprende a dar estilo a tus páginas con selectores, colores,
+                            tipografía y el modelo de cajas.
+                        </p>
+                        <p class="card-text">
+                <span class="badge bg-success-subtle text-success-emphasis">
+                  Nivel: Intermedio
+                </span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Columna - Tablón de Anuncios 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Anuncio 3 · Git y GitHub</h2>
+                        <p class="card-text">
+                            Control de versiones, ramas y trabajo colaborativo usando GitHub
+                            para proyectos reales.
+                        </p>
+                        <p class="card-text">
+                <span class="badge bg-success-subtle text-success-emphasis">
+                  Nivel: Inicial
+                </span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Columna - Tablón de Anuncios 4 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Anuncio 4 · JavaScript básico</h2>
+                        <p class="card-text">
+                            Sintaxis básica, variables y eventos para dar interactividad
+                            a tus primeras páginas web.
+                        </p>
+                        <p class="card-text">
+                <span class="badge bg-success-subtle text-success-emphasis">
+                  Nivel: Inicial
+                </span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Columna - Tablón de Anuncios 5 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Anuncio 5 · Introducción a Python</h2>
+                        <p class="card-text">
+                            Primeros pasos con Python para automatizar tareas y trabajar
+                            con datos de forma sencilla.
+                        </p>
+                        <p class="card-text">
+                <span class="badge bg-success-subtle text-success-emphasis">
+                  Nivel: Intermedio
+                </span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Columna - Tablón de Anuncios 6 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h5">Anuncio 6 · Taller de entrevistas técnicas</h2>
+                        <p class="card-text">
+                            Simulación de entrevistas, preguntas frecuentes y consejos para
+                            presentar tus proyectos con seguridad.
+                        </p>
+                        <p class="card-text">
+                <span class="badge bg-success-subtle text-success-emphasis">
+                  Nivel: Avanzado
+                </span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- Pie de Página con estilos de Bootstrap -->
+<footer class="mt-4 py-3 border-top text-dark">
+    <div class="container text-center small">
+        <p class="mb-0">
+            Desarrollo de la Actividad Complementaria <strong>Tablón de Anuncios</strong> con Bootstrap 5.3
+        </p>
+        <p class="mb-0">
+            Instructor <strong>Felipe Cuevas</strong> | <em>Bootcamp Full Stack Python</em>
+        </p>
+    </div>
+</footer>
+<!-- (Opcional) Bootstrap JS, por si lo necesitas más adelante -->
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>
