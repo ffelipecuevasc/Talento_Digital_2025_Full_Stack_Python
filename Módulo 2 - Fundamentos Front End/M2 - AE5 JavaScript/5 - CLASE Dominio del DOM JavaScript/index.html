@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Demo DOM y Selectores</title>
+    <style>
+        /* Un poco de estilo básico para ver los cambios más claros */
+        .resaltado {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        .nota {
+            padding: 4px 8px;
+            margin: 2px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .nota-importante {
+            border-left: 4px solid orange;
+        }
+    </style>
+</head>
+<body>
+<h1 id="main-title">Demo DOM: Manipulando la página con JavaScript</h1>
+
+<p class="descripcion">
+    Este párrafo se actualizará desde JavaScript usando diferentes propiedades de texto.
+</p>
+<p class="descripcion">
+    También veremos cómo seleccionar múltiples párrafos y aplicarles estilos.
+</p>
+
+<hr>
+
+<h2>Notas</h2>
+
+<div id="notas-container">
+    <ul id="lista-notas">
+        <li class="nota">Nota inicial 1</li>
+        <li class="nota nota-importante">Nota inicial 2 (importante)</li>
+    </ul>
+</div>
+
+<div>
+    <label for="nueva-nota">Escribe una nueva nota:</label>
+    <input id="nueva-nota" type="text" placeholder="Ej: Estudiar DOM" />
+    <button id="btn-agregar">Agregar nota</button>
+    <button id="btn-eliminar-ultima">Eliminar última nota</button>
+</div>
+
+<hr>
+
+<button id="btn-resaltar-titulo">Resaltar título</button>
+<button id="btn-resaltar-parrafos">Resaltar todos los párrafos</button>
+<button id="btn-mostrar-html">Mostrar innerHTML del contenedor de notas</button>
+
+<!-- Enlazamos el archivo JavaScript donde manipulamos el DOM -->
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eventos en JavaScript - Demo</title>
+  <style>
+    .caja {
+      width: 200px;
+      height: 150px;
+      border: 2px solid #333;
+      margin: 16px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f5f5f5;
+    }
+
+    .caja.activa {
+      background-color: #cce5ff;
+    }
+
+    .log {
+      font-family: monospace;
+      font-size: 0.9rem;
+      max-height: 160px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 8px;
+      margin-top: 8px;
+      background-color: #fafafa;
+    }
+
+    .log-entry {
+      margin: 2px 0;
+    }
+  </style>
+</head>
+<body>
+<h1>Eventos en JavaScript</h1>
+<p>
+  Interactúa con los botones, la caja y los campos de texto para ver cómo
+  reaccionan los eventos. Revisa también la consola del navegador (F12).
+</p>
+
+<hr>
+
+<h2>1. Eventos de click en botones</h2>
+
+<button id="btn-click-prop">
+  Click (usando propiedad <code>onclick</code>)
+</button>
+
+<button id="btn-click-add">
+  Click (usando <code>addEventListener</code>)
+</button>
+
+<button id="btn-dblclick">
+  Doble click (<code>dblclick</code>)
+</button>
+
+<hr>
+
+<h2>2. Eventos del mouse en una caja</h2>
+<p>
+  Pasa el mouse sobre la caja, haz click, mantén presionado, muévelo, etc.
+</p>
+
+<div id="caja-mouse" class="caja">
+  Interactúa aquí
+</div>
+
+<p><strong>Último evento de mouse:</strong> <span id="info-mouse">Ninguno aún</span></p>
+
+<hr>
+
+<h2>3. Eventos del teclado en un input</h2>
+<p>Escribe algo y presta atención a los mensajes:</p>
+
+<input id="input-teclado" type="text" placeholder="Escribe y presiona teclas" />
+<p id="info-teclado">Esperando teclas...</p>
+
+<hr>
+
+<h2>4. Eventos en campos de texto y select</h2>
+
+<div>
+  <label for="input-texto">Campo de texto (input):</label>
+  <input id="input-texto" type="text" placeholder="Texto para eventos change/input" />
+  <p id="info-input-texto">Sin cambios todavía.</p>
+</div>
+
+<div>
+  <label for="select-opcion">Seleccione una opción:</label>
+  <select id="select-opcion">
+    <option value="">-- Elige una opción --</option>
+    <option value="rojo">Rojo</option>
+    <option value="verde">Verde</option>
+    <option value="azul">Azul</option>
+  </select>
+  <p id="info-select">Ninguna opción seleccionada.</p>
+</div>
+
+<hr>
+
+<h2>5. Registro de eventos</h2>
+<div id="log-eventos" class="log">
+  <!-- Aquí se irán agregando mensajes de eventos -->
+</div>
+
+<!-- Enlazamos el archivo JavaScript con toda la lógica de eventos -->
+<script src="eventos_demo.js"></script>
+</body>
+</html>
