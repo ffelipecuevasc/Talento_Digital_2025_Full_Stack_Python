@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de tareas en una empresa</title>
+
+  <!-- CSS de Bootstrap por CDN (no usamos archivo CSS propio) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+<!-- Contenedor principal -->
+<main class="container py-5">
+
+  <!-- Título -->
+  <header class="mb-4">
+    <h1 class="fw-bold">Gestión de tareas en una empresa</h1>
+  </header>
+
+  <!-- CONTEXTO -->
+  <section class="mb-4">
+    <h2 class="h5">Contexto:</h2>
+    <p>
+      En este ejercicio, crearemos una aplicación web interactiva utilizando jQuery
+      para gestionar usuarios. Los administradores podrán agregar, actualizar y
+      eliminar usuarios dinámicamente en una tabla HTML, aplicando eventos de jQuery
+      para manipular el DOM.
+    </p>
+  </section>
+
+  <!-- Instrucciones -->
+  <section class="mb-4">
+    <h2 class="h5">Instrucciones</h2>
+    <ul>
+      <li>Crear una interfaz con una tabla para mostrar los usuarios registrados.</li>
+      <li>Agregar un formulario para ingresar nuevos usuarios con nombre y edad.</li>
+      <li>Permitir editar los datos de un usuario directamente desde la tabla.</li>
+      <li>Implementar la opción de eliminar usuarios mediante un botón en cada fila.</li>
+      <li>Usar jQuery para manejar los eventos y actualizar la interfaz en tiempo real, sin recargar la página.</li>
+    </ul>
+  </section>
+
+  <!-- APLICACIÓN INTERACTIVA -->
+  <section>
+    <h2 class="h5 mb-3">Gestión de usuarios (ejemplo práctico)</h2>
+
+    <!-- Tarjeta de Bootstrap que contiene formulario + tabla -->
+    <div class="card">
+      <div class="card-body">
+        <h3 class="h6 mb-3">Agregar nuevo usuario</h3>
+
+        <!-- FORMULARIO para nombre y edad -->
+        <!-- Usamos un <form> para poder capturar el evento submit con jQuery -->
+        <form id="form-usuario" class="row g-3 mb-4">
+          <!-- Campo nombre -->
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text"
+                   id="nombre"
+                   class="form-control"
+                   placeholder="Ej: Ana Pérez">
+          </div>
+
+          <!-- Campo edad -->
+          <div class="col-md-3">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="number"
+                   id="edad"
+                   class="form-control"
+                   placeholder="Ej: 30"
+                   min="0">
+          </div>
+
+          <!-- Botón para agregar -->
+          <div class="col-md-3 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100" id="btn-agregar">
+              Agregar usuario
+            </button>
+          </div>
+        </form>
+
+        <!-- TABLA de usuarios -->
+        <h3 class="h6 mb-2">Usuarios registrados</h3>
+        <table class="table table-striped table-hover align-middle">
+          <thead class="table-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th class="text-center">Acciones</th>
+          </tr>
+          </thead>
+          <!-- El cuerpo de la tabla se llenará dinámicamente con jQuery -->
+          <tbody id="tabla-usuarios">
+          <!-- Ejemplo inicial opcional (se puede borrar si se desea comenzar vacío) -->
+          <!--
+          <tr>
+            <td contenteditable="true">Juan Demo</td>
+            <td contenteditable="true">25</td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-danger btn-eliminar">Eliminar</button>
+            </td>
+          </tr>
+          -->
+          </tbody>
+        </table>
+
+        <small class="text-muted">
+          Tip: puedes editar el <strong>nombre</strong> y la <strong>edad</strong> directamente en la tabla.
+          Haz clic en <em>Eliminar</em> para quitar un usuario.
+        </small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- jQuery por CDN (obligatorio para usar nuestro código con $) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+<!-- Archivo JS propio con la lógica de la tabla -->
+<script src="index.js"></script>
+</body>
+</html>

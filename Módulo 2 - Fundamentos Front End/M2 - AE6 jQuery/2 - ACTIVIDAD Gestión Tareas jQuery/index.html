@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de tareas en una empresa</title>
+
+    <!-- CSS de Bootstrap por CDN (no usamos archivo CSS propio) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+<!-- Contenedor principal -->
+<main class="container py-5">
+    <!-- Título -->
+    <header class="mb-4">
+        <h1 class="fw-bold">Gestión de tareas en una empresa</h1>
+    </header>
+
+    <!-- Contexto -->
+    <section class="mb-4">
+        <h2 class="h5">Contexto:</h2>
+        <p>
+            En una empresa de desarrollo de software, los equipos deben gestionar sus tareas
+            diarias de manera eficiente. Para ello, necesitan una herramienta sencilla que les
+            permita agregar y eliminar tareas en una lista dinámica.
+        </p>
+        <p>
+            El área de gestión ha solicitado una funcionalidad que permita a los empleados
+            agregar tareas pendientes y eliminarlas cuando estén completadas, sin necesidad
+            de recargar la página.
+        </p>
+    </section>
+
+    <!-- Instrucciones -->
+    <section class="mb-4">
+        <h2 class="h5">Instrucciones:</h2>
+        <p>
+            Desarrollar una aplicación web simple en la que los empleados puedan agregar
+            tareas a una lista y eliminarlas una vez que estén completadas, utilizando
+            jQuery para manipular el DOM.
+        </p>
+    </section>
+
+    <!-- Aplicación funcional de tareas -->
+    <section>
+        <h2 class="h5 mb-3">Aplicación de ejemplo</h2>
+
+        <div class="card">
+            <div class="card-body">
+                <!-- Campo de texto donde el usuario escribe la tarea -->
+                <div class="mb-3">
+                    <label for="input-tarea" class="form-label">Nueva tarea</label>
+                    <input type="text"
+                           id="input-tarea"
+                           class="form-control"
+                           placeholder="Escribe una tarea pendiente">
+                </div>
+
+                <!-- Botón para agregar la tarea -->
+                <button id="btn-agregar" class="btn btn-primary mb-3">
+                    Agregar tarea
+                </button>
+
+                <!-- Lista donde se mostrarán las tareas -->
+                <ul id="lista-tareas" class="list-group mb-2">
+                    <!-- Las tareas se agregan aquí con jQuery -->
+                </ul>
+
+                <small class="text-muted">
+                    Tip: haz clic en una tarea para marcarla como completada y eliminarla de la lista.
+                </small>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- jQuery por CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+<!-- Nuestro archivo JavaScript con la lógica de la lista de tareas -->
+<script src="index.js"></script>
+</body>
+</html>
