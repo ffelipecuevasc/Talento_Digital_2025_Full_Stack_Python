@@ -1,0 +1,21 @@
+<!-- DTL - Django Templates Language (Python minimizada) -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Alumnos</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Liceo Digital - Portal de Alumnos</h1>
+    </header>
+    <main>
+        <h2>Bienvenido a tu plataforma estudiantil</h2>
+        <p>Aquí podrás revisar tus datos personales. <em>(Estamos en la App Alumnos del Proyecto Django)</em>.</p>
+        <a href="{% url 'inicio_global' %}">Volver al Portal Central</a>
+    </main>
+</body>
+</html>

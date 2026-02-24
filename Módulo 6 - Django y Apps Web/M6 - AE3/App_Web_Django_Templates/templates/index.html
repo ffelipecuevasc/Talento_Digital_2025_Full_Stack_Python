@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - App Gestión Liceo</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+<main>
+    <h1>Bienvenido a la App Gestión Liceos</h1>
+    <p>El portal central de nuestro liceo digital.</p>
+    <a href="{% url 'inicio_alumnos' %}">Entrar a la App Alumnos</a>
+</main>
+</body>
+</html>
