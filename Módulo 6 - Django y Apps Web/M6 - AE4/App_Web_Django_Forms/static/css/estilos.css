@@ -1,0 +1,206 @@
+/* ============================================================
+   VARIABLES & RESET — estilo profesional tipo Tailwind
+   ============================================================ */
+
+:root {
+  --color-bg:          #0f172a;       /* slate-900  */
+  --color-surface:     #1e293b;       /* slate-800  */
+  --color-border:      #334155;       /* slate-700  */
+  --color-accent:      #38bdf8;       /* sky-400    */
+  --color-accent-dark: #0284c7;       /* sky-600    */
+  --color-text:        #e2e8f0;       /* slate-200  */
+  --color-muted:       #94a3b8;       /* slate-400  */
+
+  --font-display: 'Georgia', 'Times New Roman', serif;
+  --font-body:    'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --radius:   0.5rem;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.5);
+  --transition: 150ms cubic-bezier(.4,0,.2,1);
+  --max-width: 860px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   BODY
+   ============================================================ */
+
+body {
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(56,189,248,.12) 0%, transparent 70%);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;          /* 16 px */
+  line-height: 1.75;        /* generous leading */
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(15, 23, 42, .85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  height: 64px;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+main {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+
+  /* Suave animación de entrada */
+  animation: fadeUp .45s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  width: 100%;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-muted);
+  font-size: .875rem;       /* 14 px */
+  text-align: center;
+  padding: 1.5rem 1.5rem;
+  letter-spacing: .02em;
+}
+
+footer p {
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ============================================================
+   H1
+   ============================================================ */
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.25rem);   /* fluido: 32 px → 52 px */
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  color: #f8fafc;                          /* slate-50  */
+
+  /* Degradado en el texto */
+  background: linear-gradient(135deg, #f8fafc 30%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   P
+   ============================================================ */
+
+p {
+  color: var(--color-muted);
+  font-size: 1.0625rem;     /* 17 px */
+  line-height: 1.8;
+  max-width: 68ch;          /* longitud de línea óptima */
+  margin-bottom: 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   A  (enlaces)
+   ============================================================ */
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition:
+    color          var(--transition),
+    border-color   var(--transition),
+    opacity        var(--transition);
+}
+
+a:hover,
+a:focus-visible {
+  color: #7dd3fc;            /* sky-300 — más luminoso al hover */
+  border-bottom-color: currentColor;
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   NAV — barra de navegación dentro del header
+   ============================================================ */
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;             /* separación entre botones */
+}
+
+nav a {
+  color: var(--color-muted);
+  font-size: 0.9375rem;     /* 15 px */
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: none;      /* anulamos el subrayado del estilo base */
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--color-text);
+  background-color: var(--color-border);
+  border-bottom: none;
+}
+
+nav a.activo {
+  color: var(--color-accent);
+  background-color: rgba(56, 189, 248, 0.1);
+}

@@ -1,0 +1,18 @@
+<!-- DTL - Django Templates Language (Python minimizada) -->
+{% extends 'base.html' %}
+
+{% block titulo %} ¡Registro Exitoso! {% endblock %}
+
+{% block contenido %}
+
+    <h1>¡Registro Exitoso del Alumno!</h1>
+    <p>El alumno ha sido ingresado correctamente a la Base de Datos.</p>
+
+    <h2>Resumen de los datos guardados:</h2>
+    <ul>
+        <li><strong>Nombre: </strong>{{ nombre }}</li>
+        <li><strong>Apellido: </strong>{{ apellido }}</li>
+        <li><strong>Correo Electrónico: </strong>{{ email }}</li>
+    </ul>
+
+{% endblock %}
