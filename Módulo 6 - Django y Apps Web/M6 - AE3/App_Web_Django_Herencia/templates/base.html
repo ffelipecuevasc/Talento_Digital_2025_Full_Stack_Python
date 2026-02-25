@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %} App Gestión Liceos {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="{% url 'inicio_global' %}">Inicio</a>
+        <a href="{% url 'inicio_alumnos' %}">Portal Alumnos</a>
+        <a href="{% url 'lista_alumnos' %}">Listado Alumnos</a>
+        <a href="#">Portal Profesores</a>
+        <a href="#">Portal Cursos</a>
+    </nav>
+</header>
+<main>
+    {% block contenido %}
+        <h1>Bienvenido a la App Gestión Liceos</h1>
+        <p>El portal central de nuestro liceo digital.</p>
+    {% endblock %}
+</main>
+<footer>
+    <div style="ali: center">
+        <p>&copy; 2026 Liceo Digital. Todos los derechos reservados | Felipe Cuevas</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,16 @@
+"""
+ASGI config for App_Web_Django_Herencia project.
+
+It exposes the ASGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/6.0/howto/deployment/asgi/
+"""
+
+import os
+
+from django.core.asgi import get_asgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "App_Web_Django_Herencia.settings")
+
+application = get_asgi_application()

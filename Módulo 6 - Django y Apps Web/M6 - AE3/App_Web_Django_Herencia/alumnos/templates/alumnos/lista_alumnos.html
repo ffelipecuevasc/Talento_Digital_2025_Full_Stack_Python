@@ -1,0 +1,26 @@
+<!-- DTL - Django Templates Language (Python minimizada) -->
+{% extends 'base.html' %}
+
+{% block titulo %} Listado de Alumnos {% endblock %}
+
+{% block contenido %}
+
+        <h1>Liceo Digital - Portal de Alumnos</h1>
+        <p>Entraste a una App (Módulo) de tu Liceo Digital.</p>
+        <h2>Listado de Alumnos</h2>
+        <p>Acá va el listado de alumnos:</p>
+        <!-- Contenido generado dinámicamente = Diccionario (contexto) -->
+        {% if lista_alumnos %}
+            <p>¡Excelente! Tenemos los siguientes alumnos inscritos:</p>
+            <div>
+                <ol>
+                    {% for alumno in lista_alumnos %}
+                        <li>{{ alumno }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        {% else %}
+            <p><strong>AVISO:</strong> Actualmente no hay alumnos para listar.</p>
+        {% endif %}
+        <!-- Fin de Contenido generado dinámicamente -->
+{% endblock %}
