@@ -1,0 +1,26 @@
+<!-- DTL - Django Templates Language (Python minimizada) -->
+{% extends 'base.html' %}
+
+{% block titulo %} Registro de Alumno {% endblock %}
+
+{% block contenido %}
+
+        <h1>Registrar un Nuevo Alumno</h1>
+        <form method="post">
+            <!-- Generación del Token CSRF para seguridad -->
+            {% csrf_token %}
+
+            <!-- Renderización de los campos del formulario (creación automática) -->
+            <div>
+                {{ form.as_p }}
+            </div>
+
+            <!-- Botón de guardado -->
+            <div>
+                <button type="submit">
+                    Guardar Alumno
+                </button>
+            </div>
+        </form>
+
+{% endblock %}
