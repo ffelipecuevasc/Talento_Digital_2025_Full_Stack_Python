@@ -1,0 +1,16 @@
+<!-- DTL - Django Templates Language (Python minimizada) -->
+{% extends 'base.html' %}
+
+{% block titulo %} Inicio de Sesión {% endblock %}
+
+{% block contenido %}
+
+    <h2>Inicio de Sesión</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+{% endblock %}
